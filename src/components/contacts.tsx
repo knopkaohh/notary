@@ -23,7 +23,7 @@ export function Contacts() {
         </div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="space-y-6" data-reveal="left">
+          <div className="space-y-6" data-reveal>
             <div className="overflow-hidden rounded-2xl">
               <Image
                 src="/bc-monarch.png"
@@ -98,7 +98,7 @@ export function Contacts() {
           </div>
           <div
             className="min-h-[520px] overflow-hidden rounded-2xl border border-border shadow-[0_24px_60px_rgb(23_18_16_/_0.12)]"
-            data-reveal="right"
+            data-reveal
           >
             <iframe
               title="Карта: нотариус Давыдова, БЦ Монарх"

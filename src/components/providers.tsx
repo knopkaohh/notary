@@ -26,7 +26,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         <Footer />
         <MobileBar />
         <AppointmentDialog />
-        <Toaster position="top-center" />
+        <Toaster position="top-center" offset={88} />
       </AppointmentProvider>
     </ThemeProvider>
   );

@@ -121,10 +121,12 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
     background-image:
       radial-gradient(1200px 600px at 10% -10%, rgb(196 165 116 / 12%), transparent 50%),
       radial-gradient(900px 500px at 110% 8%, rgb(23 18 16 / 6%), transparent 45%);

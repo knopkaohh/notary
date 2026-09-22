@@ -5,7 +5,7 @@ export function About() {
   return (
     <section id="about" className="scroll-mt-24 px-4 py-24 sm:px-6">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-        <div data-reveal="left">
+        <div data-reveal>
           <p className="text-[11px] tracking-[0.28em] text-muted-foreground uppercase">
             О нотариусе
           </p>
@@ -38,8 +38,8 @@ export function About() {
             </div>
           </dl>
         </div>
-        <div className="relative" data-reveal="right">
-          <div className="absolute -inset-3 rounded-[28px] border border-gold/40" />
+        <div className="relative p-3" data-reveal>
+          <div className="pointer-events-none absolute inset-0 rounded-[28px] border border-gold/40" />
           <div className="relative overflow-hidden rounded-[22px] shadow-[0_30px_80px_rgb(23_18_16_/_0.22)]">
             <Image
               src="/notary-office.jpg"

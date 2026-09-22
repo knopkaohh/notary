@@ -82,7 +82,7 @@ export function AppointmentDialog() {
             Запишитесь на приём
           </DialogTitle>
           <DialogDescription>
-            Укажите удобное время — подтвердим запись по телефону. Срочно? Звоните{" "}
+            Укажите удобное время — подтвердим запись по телефону. Срочно? Звоните{"\u00a0"}
             <a href={site.phoneHref} className="text-foreground underline">
               {site.phone}
             </a>
@@ -92,7 +92,14 @@ export function AppointmentDialog() {
         <form onSubmit={onSubmit} className="grid gap-3">
           <div className="grid gap-3 sm:grid-cols-2">
             <Field label="День *" htmlFor="date">
-              <Input id="date" name="date" type="date" required className="h-10" />
+              <Input
+                id="date"
+                name="date"
+                type="date"
+                required
+                lang="ru"
+                className="h-10"
+              />
             </Field>
             <Field label="Удобное время *" htmlFor="time">
               <select
