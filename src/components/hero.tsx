@@ -21,7 +21,7 @@ export function Hero() {
           priority
           quality={90}
           sizes="100vw"
-          className="object-cover object-[58%_30%]"
+          className="object-cover object-[60%_26%]"
         />
         <div className="absolute inset-0 bg-linear-to-t from-espresso via-espresso/70 to-espresso/25" />
       </div>
@@ -36,8 +36,7 @@ export function Hero() {
           sizes="54vw"
           className="object-cover object-[62%_36%]"
         />
-        <div className="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-espresso to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-linear-to-t from-espresso/40 to-transparent" />
+        <div className="absolute inset-y-0 left-0 w-24 bg-linear-to-r from-espresso to-transparent" />
       </div>
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-4 pb-24 pt-32 sm:px-6 lg:justify-center lg:pb-20 lg:pt-28">
