@@ -10,7 +10,7 @@ export function TrustBar() {
 
   return (
     <section className="relative z-10 -mt-6 px-4 sm:px-6">
-      <div className="mx-auto grid max-w-6xl gap-px overflow-hidden rounded-2xl border border-gold/25 bg-gold/20 shadow-[0_24px_60px_rgb(23_18_16_/_0.18)] sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-px overflow-hidden rounded-2xl border border-gold/30 bg-gold/25 shadow-[0_24px_60px_rgb(23_18_16_/_0.18)] sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
           <div
             key={item.label}

@@ -48,7 +48,9 @@ export function Services() {
             return (
               <article
                 key={category.id}
-                className="group flex flex-col rounded-2xl border border-gold/20 bg-white/5 p-6 transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:bg-white/10"
+                className={`group flex flex-col rounded-2xl border border-gold/20 bg-white/5 p-6 transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:bg-white/10 ${
+                  category.id === "other" ? "md:col-span-2" : ""
+                }`}
                 data-reveal
                 style={{ transitionDelay: `${(index % 2) * 90}ms` }}
               >
@@ -63,7 +65,11 @@ export function Services() {
                   </div>
                   <Icon className="size-6 shrink-0 text-gold" />
                 </div>
-                <ul className="mt-5 flex-1 space-y-2 text-sm leading-relaxed text-gold-soft/80">
+                <ul
+                  className={`mt-5 flex-1 space-y-2 text-sm leading-relaxed text-gold-soft/80 ${
+                    category.id === "other" ? "md:columns-2 md:gap-x-10" : ""
+                  }`}
+                >
                   {category.items.map((item) => (
                     <li key={item} className="flex gap-2">
                       <span className="mt-[9px] size-1.5 shrink-0 rounded-full bg-gold" />
