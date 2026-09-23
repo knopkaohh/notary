@@ -30,7 +30,7 @@ export function Contacts() {
                 alt="Бизнес-центр Монарх на Ленинградском проспекте"
                 width={668}
                 height={500}
-                className="h-44 w-full object-cover sm:h-52"
+                className="h-36 w-full object-cover sm:h-52"
               />
             </div>
             <div className="rounded-2xl border border-border bg-card p-6">

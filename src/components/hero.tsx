@@ -33,8 +33,8 @@ export function Hero() {
             alt="Кабинет нотариуса Давыдовой Евгении Петровны"
             fill
             priority
-            sizes="100vw"
-            className="object-cover object-[50%_18%]"
+          sizes="(max-width: 767px) 92vw, 100vw"
+          className="object-cover object-[50%_30%]"
           />
           <div className="absolute inset-0 bg-linear-to-t from-espresso/55 via-transparent to-espresso/15" />
         </div>
