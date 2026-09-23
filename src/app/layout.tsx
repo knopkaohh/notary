@@ -1,8 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { Providers } from "@/components/providers";
 import { site } from "@/lib/site";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#171210",
+};
 
 const heading = Cormorant_Garamond({
   variable: "--font-cormorant",

@@ -31,13 +31,13 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-40 pt-[env(safe-area-inset-top)] transition-all duration-500 ${
         solid
           ? "bg-espresso/92 text-gold-soft shadow-[0_12px_40px_rgb(23_18_16_/_0.28)] backdrop-blur-md"
-          : "bg-transparent text-gold-soft"
+          : "bg-espresso/80 text-gold-soft backdrop-blur-sm md:bg-transparent md:backdrop-blur-none"
       }`}
     >
-      <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 md:h-[76px]">
         <Link href="/" className="min-w-0 leading-tight">
           <span className="block font-heading text-[15px] tracking-[0.16em] text-gold uppercase sm:text-base">
             Давыдова Е. П.
@@ -88,7 +88,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="border-l border-gold/20 bg-espresso text-gold-soft"
+              className="border-l border-gold/20 bg-espresso pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] text-gold-soft"
             >
               <SheetHeader>
                 <SheetTitle className="font-heading tracking-[0.16em] text-gold uppercase">

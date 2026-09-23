@@ -27,13 +27,13 @@ export function Services() {
   const { openAppointment } = useAppointment();
 
   return (
-    <section id="services" className="scroll-mt-24 bg-espresso py-24 text-gold-soft">
+    <section id="services" className="scroll-mt-24 bg-espresso py-14 text-gold-soft md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-2xl" data-reveal>
-          <p className="text-[11px] tracking-[0.28em] text-gold uppercase">
+          <p className="text-[11px] tracking-[0.16em] text-gold uppercase sm:tracking-[0.28em]">
             Услуги нотариуса
           </p>
-          <h2 className="mt-3 font-heading text-4xl leading-tight sm:text-5xl">
+          <h2 className="mt-3 font-heading text-[1.85rem] leading-tight sm:text-4xl md:text-5xl">
             Всё, что удостоверяют в конторе
           </h2>
           <p className="mt-4 text-gold-soft/70">
@@ -42,13 +42,13 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-8 grid gap-4 md:mt-12 md:grid-cols-2 md:gap-5">
           {serviceCategories.map((category, index) => {
             const Icon = icons[category.id];
             return (
               <article
                 key={category.id}
-                className="group flex flex-col rounded-2xl border border-gold/20 bg-white/5 p-6 transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:bg-white/10"
+                className="group flex flex-col rounded-2xl border border-gold/20 bg-white/5 p-5 transition duration-500 hover:border-gold/50 hover:bg-white/10 md:p-6 md:hover:-translate-y-1"
                 data-reveal
                 style={{ transitionDelay: `${(index % 2) * 90}ms` }}
               >
@@ -73,7 +73,7 @@ export function Services() {
                 </ul>
                 <Button
                   onClick={() => openAppointment(category.title)}
-                  className="mt-6 h-10 self-start rounded-full bg-gold px-5 text-[12px] tracking-[0.14em] text-espresso uppercase hover:bg-gold-soft"
+                  className="mt-6 h-11 w-full rounded-full bg-gold px-5 text-[12px] tracking-[0.1em] text-espresso uppercase hover:bg-gold-soft sm:w-auto sm:self-start sm:tracking-[0.14em]"
                 >
                   Записаться по этой услуге
                 </Button>

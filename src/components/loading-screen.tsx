@@ -74,10 +74,10 @@ export function LoadingScreen() {
           </div>
         </div>
         <div className="loader-mark space-y-2">
-          <p className="font-heading text-xl tracking-[0.22em] text-gold uppercase sm:text-2xl">
+          <p className="font-heading text-xl tracking-[0.12em] text-gold uppercase sm:text-2xl sm:tracking-[0.22em]">
             {site.title}
           </p>
-          <p className="loader-pulse text-sm tracking-[0.28em] text-gold-soft/70 uppercase">
+          <p className="loader-pulse text-sm tracking-[0.12em] text-gold-soft/70 uppercase sm:tracking-[0.28em]">
             Открываем приёмную
           </p>
         </div>

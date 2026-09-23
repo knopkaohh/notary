@@ -3,13 +3,13 @@ import { site } from "@/lib/site";
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-24 px-4 py-24 sm:px-6">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+    <section id="about" className="scroll-mt-24 px-4 py-14 sm:px-6 md:py-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 md:gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <div data-reveal>
-          <p className="text-[11px] tracking-[0.28em] text-muted-foreground uppercase">
+          <p className="text-[11px] tracking-[0.16em] text-muted-foreground uppercase sm:tracking-[0.28em]">
             О нотариусе
           </p>
-          <h2 className="mt-3 font-heading text-4xl leading-tight sm:text-5xl">
+          <h2 className="mt-3 font-heading text-[1.85rem] leading-tight sm:text-4xl md:text-5xl">
             Спокойная сделка начинается с точного документа
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
@@ -46,10 +46,10 @@ export function About() {
               alt="Евгения Петровна Давыдова в нотариальной конторе"
               width={1200}
               height={900}
-              className="h-[460px] w-full object-cover object-[55%_18%] sm:h-[520px]"
+              className="h-56 w-full object-cover object-[55%_18%] sm:h-[460px] md:h-[520px]"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-espresso/90 to-transparent p-6 text-gold-soft">
-              <p className="font-heading text-2xl">{site.name}</p>
+            <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-espresso/90 to-transparent p-4 text-gold-soft sm:p-6">
+              <p className="font-heading text-xl sm:text-2xl">{site.name}</p>
               <p className="text-sm text-gold">{site.title}</p>
             </div>
           </div>

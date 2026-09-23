@@ -76,7 +76,7 @@ export function AppointmentDialog() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
+      <DialogContent className="top-[max(0.75rem,env(safe-area-inset-top))] left-1/2 max-h-[calc(100dvh-1.5rem-env(safe-area-inset-bottom))] w-[calc(100%-1.25rem)] max-w-none translate-x-[-50%] translate-y-0 overflow-y-auto rounded-2xl p-5 sm:top-1/2 sm:max-h-[90vh] sm:max-w-lg sm:-translate-y-1/2">
         <DialogHeader>
           <DialogTitle className="font-heading text-2xl">
             Запишитесь на приём
@@ -98,7 +98,7 @@ export function AppointmentDialog() {
                 type="date"
                 required
                 lang="ru"
-                className="h-10"
+                className="h-12 text-base sm:h-10 sm:text-sm"
               />
             </Field>
             <Field label="Удобное время *" htmlFor="time">
@@ -106,7 +106,7 @@ export function AppointmentDialog() {
                 id="time"
                 name="time"
                 required
-                className="h-10 w-full rounded-lg border border-input bg-transparent px-2.5 text-sm"
+                className="h-12 w-full rounded-lg border border-input bg-transparent px-2.5 text-base sm:h-10 sm:text-sm"
                 defaultValue=""
               >
                 <option value="" disabled>
@@ -121,7 +121,7 @@ export function AppointmentDialog() {
             </Field>
           </div>
           <Field label="ФИО *" htmlFor="fio">
-            <Input id="fio" name="fio" required className="h-10" />
+            <Input id="fio" name="fio" required className="h-12 text-base sm:h-10 sm:text-sm" />
           </Field>
           <Field label="Телефон *" htmlFor="phone">
             <Input
@@ -130,11 +130,17 @@ export function AppointmentDialog() {
               type="tel"
               required
               placeholder="+7"
-              className="h-10"
+              className="h-12 text-base sm:h-10 sm:text-sm"
             />
           </Field>
           <Field label="E-mail *" htmlFor="email">
-            <Input id="email" name="email" type="email" required className="h-10" />
+            <Input
+              id="email"
+              name="email"
+              type="email"
+              required
+              className="h-12 text-base sm:h-10 sm:text-sm"
+            />
           </Field>
           <Field label="Услуга *" htmlFor="service">
             <select
@@ -143,7 +149,7 @@ export function AppointmentDialog() {
               required
               value={service}
               onChange={(event) => setService(event.target.value)}
-              className="h-10 w-full rounded-lg border border-input bg-transparent px-2.5 text-sm"
+              className="h-12 w-full rounded-lg border border-input bg-transparent px-2.5 text-base sm:h-10 sm:text-sm"
             >
               {serviceCategories.map((item) => (
                 <option key={item.id} value={item.title}>
@@ -173,7 +179,7 @@ export function AppointmentDialog() {
           <Button
             type="submit"
             disabled={pending}
-            className="mt-2 h-11 rounded-full bg-espresso text-gold hover:bg-espresso/90"
+            className="mt-2 h-12 rounded-full bg-espresso text-gold hover:bg-espresso/90"
           >
             {pending ? "Отправляем…" : "Отправить заявку"}
           </Button>

@@ -9,28 +9,28 @@ export function TrustBar() {
   ];
 
   return (
-    <section className="relative z-10 -mt-6 px-4 sm:px-6">
-      <div className="mx-auto grid max-w-6xl gap-px overflow-hidden rounded-2xl border border-gold/25 bg-gold/20 shadow-[0_24px_60px_rgb(23_18_16_/_0.18)] sm:grid-cols-2 lg:grid-cols-4">
+    <section className="relative z-10 px-4 pt-2 md:-mt-6 md:px-6 md:pt-0">
+      <div className="mx-auto grid max-w-6xl gap-px overflow-hidden rounded-2xl border border-gold/25 bg-gold/20 shadow-[0_24px_60px_rgb(23_18_16_/_0.18)] grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
           <div
             key={item.label}
-            className="bg-card px-5 py-5 sm:px-6"
+            className="bg-card px-3 py-4 sm:px-6 sm:py-5"
             data-reveal
           >
-            <p className="text-[11px] tracking-[0.22em] text-muted-foreground uppercase">
+            <p className="text-[10px] tracking-[0.14em] text-muted-foreground uppercase sm:text-[11px] sm:tracking-[0.22em]">
               {item.label}
             </p>
-            <p className="mt-2 font-heading text-xl text-foreground">
+            <p className="mt-1.5 font-heading text-base leading-snug text-foreground sm:mt-2 sm:text-xl">
               {item.value}
             </p>
           </div>
         ))}
       </div>
-      <div className="mx-auto mt-16 grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto mt-6 grid max-w-6xl gap-3 md:mt-16 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
         {advantages.map((item, index) => (
           <article
             key={item.title}
-            className="rounded-2xl border border-border bg-card/70 p-6"
+            className="rounded-2xl border border-border bg-card/70 p-5 md:p-6"
             data-reveal
             style={{ transitionDelay: `${index * 80}ms` }}
           >

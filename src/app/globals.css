@@ -122,6 +122,7 @@
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scroll-padding-top: calc(4.5rem + env(safe-area-inset-top));
   }
 
   body {

@@ -11,13 +11,13 @@ export function Contacts() {
   const mapSrc = `https://yandex.ru/map-widget/v1/?ll=${site.map.lng}%2C${site.map.lat}&z=16&pt=${site.map.lng}%2C${site.map.lat}&l=map`;
 
   return (
-    <section id="contacts" className="scroll-mt-24 px-4 pb-28 sm:px-6">
+    <section id="contacts" className="scroll-mt-24 px-4 pb-10 sm:px-6 md:pb-28">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl" data-reveal>
-          <p className="text-[11px] tracking-[0.28em] text-muted-foreground uppercase">
+          <p className="text-[11px] tracking-[0.16em] text-muted-foreground uppercase sm:tracking-[0.28em]">
             Контактная информация
           </p>
-          <h2 className="mt-3 font-heading text-4xl leading-tight sm:text-5xl">
+          <h2 className="mt-3 font-heading text-[1.85rem] leading-tight sm:text-4xl md:text-5xl">
             БЦ «Монарх», 29 этаж
           </h2>
         </div>
@@ -30,7 +30,7 @@ export function Contacts() {
                 alt="Бизнес-центр Монарх на Ленинградском проспекте"
                 width={668}
                 height={500}
-                className="h-52 w-full object-cover"
+                className="h-44 w-full object-cover sm:h-52"
               />
             </div>
             <div className="rounded-2xl border border-border bg-card p-6">
@@ -97,13 +97,13 @@ export function Contacts() {
             </div>
           </div>
           <div
-            className="min-h-[520px] overflow-hidden rounded-2xl border border-border shadow-[0_24px_60px_rgb(23_18_16_/_0.12)]"
+            className="min-h-[260px] overflow-hidden rounded-2xl border border-border shadow-[0_24px_60px_rgb(23_18_16_/_0.12)] md:min-h-[520px]"
             data-reveal
           >
             <iframe
               title="Карта: нотариус Давыдова, БЦ Монарх"
               src={mapSrc}
-              className="h-full min-h-[520px] w-full border-0"
+              className="h-full min-h-[260px] w-full border-0 md:min-h-[520px]"
               loading="lazy"
             />
           </div>

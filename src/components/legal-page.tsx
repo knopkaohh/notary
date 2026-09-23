@@ -12,11 +12,11 @@ export function LegalPage({
   children: ReactNode;
 }) {
   return (
-    <article className="mx-auto max-w-3xl px-4 pb-24 pt-32 sm:px-6">
-      <p className="text-[11px] tracking-[0.24em] text-muted-foreground uppercase">
+    <article className="mx-auto max-w-3xl px-4 pb-[calc(7rem+env(safe-area-inset-bottom))] pt-[calc(5.5rem+env(safe-area-inset-top))] sm:px-6 md:pb-24 md:pt-32">
+      <p className="text-[11px] tracking-[0.16em] text-muted-foreground uppercase sm:tracking-[0.24em]">
         {site.title}
       </p>
-      <h1 className="mt-3 font-heading text-4xl leading-tight sm:text-5xl">
+      <h1 className="mt-3 font-heading text-3xl leading-tight sm:text-4xl md:text-5xl">
         {title}
       </h1>
       {updated ? (

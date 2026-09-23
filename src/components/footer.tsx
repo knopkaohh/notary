@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="bg-espresso pb-24 pt-16 text-gold-soft/80 md:pb-12">
+    <footer className="bg-espresso pt-14 pb-[calc(6.75rem+env(safe-area-inset-bottom))] text-gold-soft/80 md:pb-12 md:pt-16">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-3">
         <div>
           <p className="font-heading text-2xl tracking-[0.08em] text-gold">
