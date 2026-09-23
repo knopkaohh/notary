@@ -33,8 +33,8 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
         solid
-          ? "border-b border-gold/15 bg-espresso/92 text-gold-soft shadow-[0_12px_40px_rgb(23_18_16_/_0.28)] backdrop-blur-md"
-          : "border-b border-transparent bg-transparent text-gold-soft"
+          ? "bg-espresso/92 text-gold-soft shadow-[0_12px_40px_rgb(23_18_16_/_0.28)] backdrop-blur-md"
+          : "bg-transparent text-gold-soft"
       }`}
     >
       <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">

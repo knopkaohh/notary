@@ -20,9 +20,7 @@ export function Visit() {
               data-reveal
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <span className="inline-flex size-16 items-center justify-center rounded-full border border-gold/35 font-heading text-lg tracking-[0.08em] text-gold">
-                {step.n}
-              </span>
+              <span className="font-heading text-6xl text-gold/35">{step.n}</span>
               <h3 className="mt-4 font-heading text-2xl">{step.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {step.text}

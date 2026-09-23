@@ -13,9 +13,9 @@ export function About() {
             Спокойная сделка начинается с точного документа
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-            {site.name} — действующий нотариус города Москвы. Приём в светлом
-            кабинете на 29 этаже БЦ «Монарх»: удостоверяем сделки с недвижимостью
-            и долями ООО, оформляем доверенности, согласия, семейные соглашения,
+            {site.name} — действующий нотариус города Москвы. В офисе на
+            Ленинградском проспекте удостоверяют сделки с недвижимостью и
+            долями ООО, оформляют доверенности, согласия, семейные соглашения,
             завещания и наследственные дела.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
@@ -42,12 +42,11 @@ export function About() {
           <div className="pointer-events-none absolute inset-0 rounded-[28px] border border-gold/40" />
           <div className="relative overflow-hidden rounded-[22px] shadow-[0_30px_80px_rgb(23_18_16_/_0.22)]">
             <Image
-              src="/office-portrait.jpg"
+              src="/notary-office.jpg"
               alt="Евгения Петровна Давыдова в нотариальной конторе"
               width={1200}
-              height={1500}
-              quality={88}
-              className="h-[460px] w-full object-cover object-[68%_28%] sm:h-[540px]"
+              height={900}
+              className="h-[460px] w-full object-cover object-[55%_18%] sm:h-[520px]"
             />
             <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-espresso/90 to-transparent p-6 text-gold-soft">
               <p className="font-heading text-2xl">{site.name}</p>
