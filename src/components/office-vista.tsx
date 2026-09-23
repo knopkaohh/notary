@@ -13,8 +13,8 @@ export function OfficeVista() {
           sizes="100vw"
           className="object-cover object-[62%_42%]"
         />
-        <div className="absolute inset-0 bg-linear-to-r from-espresso/82 via-espresso/28 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-36 bg-linear-to-t from-espresso/45 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-espresso/88 via-espresso/45 to-espresso/20" />
+        <div className="absolute inset-0 bg-linear-to-t from-espresso/70 via-transparent to-espresso/30" />
 
         <div className="relative mx-auto flex min-h-[520px] max-w-6xl flex-col justify-end px-4 py-16 sm:px-6 md:min-h-[640px] md:py-20">
           <div className="max-w-xl text-gold-soft" data-reveal>

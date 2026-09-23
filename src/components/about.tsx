@@ -47,7 +47,7 @@ export function About() {
               width={1200}
               height={1500}
               quality={88}
-              className="h-[460px] w-full object-cover object-[72%_40%] sm:h-[540px]"
+              className="h-[460px] w-full object-cover object-[68%_28%] sm:h-[540px]"
             />
             <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-espresso/90 to-transparent p-6 text-gold-soft">
               <p className="font-heading text-2xl">{site.name}</p>
