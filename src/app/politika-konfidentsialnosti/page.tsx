@@ -352,7 +352,7 @@ export default function PrivacyPage() {
           Форма Согласия на обработку персональных данных пользователей Сайта
           размещается в публичном доступе по адресу:{" "}
           <a
-            href="/soglasiye-na-obrabotku-personalnykh-dannykh"
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/soglasiye-na-obrabotku-personalnykh-dannykh`}
             className="underline underline-offset-2"
           >
             /soglasiye-na-obrabotku-personalnykh-dannykh

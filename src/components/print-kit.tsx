@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Download } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { withBase } from "@/lib/base-path";
 import { cn } from "@/lib/utils";
 
 const items = [
@@ -9,7 +10,7 @@ const items = [
     title: "Листовка A5 — «без очереди»",
     format: "A5, 148×210 мм, 2 стороны",
     use: "A5 для раздачи: фасад, доверенности и согласия, бесплатный разбор документов по телефону.",
-    href: "/print/listovka-a5-semya.pdf",
+    href: withBase("/print/listovka-a5-semya.pdf"),
     pages: [
       { src: "/print/previews/listovka-a5-semya-1.png", alt: "Лицевая сторона листовки про запись без очереди" },
       { src: "/print/previews/listovka-a5-semya-2.png", alt: "Оборот с тремя поводами позвонить" },
@@ -19,7 +20,7 @@ const items = [
     title: "Листовка A5 — доли ООО",
     format: "A5, 148×210 мм, 2 стороны",
     use: "A5 для компаний: доли ООО, ФНС, опционы и список бумаг до визита.",
-    href: "/print/listovka-a5-biznes.pdf",
+    href: withBase("/print/listovka-a5-biznes.pdf"),
     pages: [
       { src: "/print/previews/listovka-a5-biznes-1.png", alt: "Лицевая сторона деловой листовки" },
       { src: "/print/previews/listovka-a5-biznes-2.png", alt: "Оборот деловой листовки" },
@@ -29,7 +30,7 @@ const items = [
     title: "Афиша A4",
     format: "A4, 210×297 мм, 1 сторона",
     use: "A4 в лифт и на стойку: крупный телефон, три направления и QR.",
-    href: "/print/listovka-a4.pdf",
+    href: withBase("/print/listovka-a4.pdf"),
     pages: [
       { src: "/print/previews/listovka-a4-1.png", alt: "Афиша A4 с призывом записаться" },
     ],
@@ -38,7 +39,7 @@ const items = [
     title: "Буклет — три фальца",
     format: "A4 альбом, 297×210 мм. Снаружи: о нотариусе · контакты · обложка. Внутри: оффер и четыре услуги.",
     use: "Та же раскладка, что в макете-примере: светлые полосы, предметные фото, обложка справа.",
-    href: "/print/buklet-a4.pdf",
+    href: withBase("/print/buklet-a4.pdf"),
     pages: [
       { src: "/print/previews/buklet-a4-1.png", alt: "Наружная сторона буклета" },
       { src: "/print/previews/buklet-a4-2.png", alt: "Внутренняя сторона буклета" },
@@ -72,7 +73,7 @@ export function PrintKit() {
       </figure>
       <div className="mt-4 flex flex-col gap-3 sm:flex-row">
         <a
-          href="/print/buklet-mockup.pdf"
+          href={withBase("/print/buklet-mockup.pdf")}
           download
           className={cn(
             buttonVariants(),
@@ -83,7 +84,7 @@ export function PrintKit() {
           Скачать мокап PDF
         </a>
         <a
-          href="/print/buklet-a4.pdf"
+          href={withBase("/print/buklet-a4.pdf")}
           download
           className={cn(
             buttonVariants({ variant: "outline" }),
