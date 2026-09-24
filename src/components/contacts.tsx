@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { withBase } from "@/lib/base-path";
 import { hoursRows, site } from "@/lib/site";
 import { useAppointment } from "@/lib/appointment-context";
 import { Button } from "@/components/ui/button";
@@ -26,7 +27,7 @@ export function Contacts() {
           <div className="space-y-6" data-reveal>
             <div className="overflow-hidden rounded-2xl">
               <Image
-                src="/bc-monarch.png"
+                src={withBase("/bc-monarch.png")}
                 alt="Бизнес-центр Монарх на Ленинградском проспекте"
                 width={668}
                 height={500}

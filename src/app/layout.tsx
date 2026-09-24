@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { Providers } from "@/components/providers";
+import { withBase } from "@/lib/base-path";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     locale: "ru_RU",
     type: "website",
   },
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: withBase("/favicon.ico") },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

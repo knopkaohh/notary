@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBase } from "@/lib/base-path";
 import { site } from "@/lib/site";
 
 export function About() {
@@ -42,7 +43,7 @@ export function About() {
           <div className="pointer-events-none absolute inset-0 rounded-[28px] border border-gold/40" />
           <div className="relative overflow-hidden rounded-[22px] shadow-[0_30px_80px_rgb(23_18_16_/_0.22)]">
             <Image
-              src="/notary-office.jpg"
+              src={withBase("/notary-office.jpg")}
               alt="Евгения Петровна Давыдова в нотариальной конторе"
               width={1200}
               height={900}

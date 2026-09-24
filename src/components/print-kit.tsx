@@ -12,8 +12,8 @@ const items = [
     use: "A5 для раздачи: фасад, доверенности и согласия, бесплатный разбор документов по телефону.",
     href: withBase("/print/listovka-a5-semya.pdf"),
     pages: [
-      { src: "/print/previews/listovka-a5-semya-1.png", alt: "Лицевая сторона листовки про запись без очереди" },
-      { src: "/print/previews/listovka-a5-semya-2.png", alt: "Оборот с тремя поводами позвонить" },
+      { src: withBase("/print/previews/listovka-a5-semya-1.png"), alt: "Лицевая сторона листовки про запись без очереди" },
+      { src: withBase("/print/previews/listovka-a5-semya-2.png"), alt: "Оборот с тремя поводами позвонить" },
     ],
   },
   {
@@ -22,8 +22,8 @@ const items = [
     use: "A5 для компаний: доли ООО, ФНС, опционы и список бумаг до визита.",
     href: withBase("/print/listovka-a5-biznes.pdf"),
     pages: [
-      { src: "/print/previews/listovka-a5-biznes-1.png", alt: "Лицевая сторона деловой листовки" },
-      { src: "/print/previews/listovka-a5-biznes-2.png", alt: "Оборот деловой листовки" },
+      { src: withBase("/print/previews/listovka-a5-biznes-1.png"), alt: "Лицевая сторона деловой листовки" },
+      { src: withBase("/print/previews/listovka-a5-biznes-2.png"), alt: "Оборот деловой листовки" },
     ],
   },
   {
@@ -32,7 +32,7 @@ const items = [
     use: "A4 в лифт и на стойку: крупный телефон, три направления и QR.",
     href: withBase("/print/listovka-a4.pdf"),
     pages: [
-      { src: "/print/previews/listovka-a4-1.png", alt: "Афиша A4 с призывом записаться" },
+      { src: withBase("/print/previews/listovka-a4-1.png"), alt: "Афиша A4 с призывом записаться" },
     ],
   },
   {
@@ -41,8 +41,8 @@ const items = [
     use: "Та же раскладка, что в макете-примере: светлые полосы, предметные фото, обложка справа.",
     href: withBase("/print/buklet-a4.pdf"),
     pages: [
-      { src: "/print/previews/buklet-a4-1.png", alt: "Наружная сторона буклета" },
-      { src: "/print/previews/buklet-a4-2.png", alt: "Внутренняя сторона буклета" },
+      { src: withBase("/print/previews/buklet-a4-1.png"), alt: "Наружная сторона буклета" },
+      { src: withBase("/print/previews/buklet-a4-2.png"), alt: "Внутренняя сторона буклета" },
     ],
   },
 ];
@@ -63,7 +63,7 @@ export function PrintKit() {
 
       <figure className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-[0_24px_60px_rgb(23_18_16_/_0.12)]">
         <Image
-          src="/print/buklet-mockup.png"
+          src={withBase("/print/buklet-mockup.png")}
           alt="Мокап буклета на ткани: наружная и внутренняя стороны"
           width={1080}
           height={1620}

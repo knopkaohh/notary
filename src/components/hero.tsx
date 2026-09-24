@@ -6,6 +6,7 @@ import { site } from "@/lib/site";
 import { useAppointment } from "@/lib/appointment-context";
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button";
+import { withBase } from "@/lib/base-path";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -15,7 +16,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-espresso text-gold-soft md:min-h-[100svh]">
       <div className="pointer-events-none absolute inset-0 hidden md:block" aria-hidden>
         <Image
-          src="/notary-office.jpg"
+          src={withBase("/notary-office.jpg")}
           alt=""
           fill
           priority
@@ -29,7 +30,7 @@ export function Hero() {
       <div className="relative mx-auto flex max-w-6xl flex-col px-4 pb-8 pt-[calc(4.35rem+env(safe-area-inset-top))] sm:px-6 md:min-h-[100svh] md:justify-center md:pb-16 md:pt-28">
         <div className="relative mb-5 aspect-[16/10] w-full overflow-hidden rounded-2xl sm:mb-6 sm:aspect-[16/9] md:hidden">
           <Image
-            src="/notary-office.jpg"
+            src={withBase("/notary-office.jpg")}
             alt="Кабинет нотариуса Давыдовой Евгении Петровны"
             fill
             priority
