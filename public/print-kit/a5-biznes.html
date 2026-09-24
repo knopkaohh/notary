@@ -2,182 +2,51 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Листовка A5 — доли ООО</title>
+    <title>Листовка A5 — компании</title>
     <link rel="stylesheet" href="./styles.css" />
     <style>
-      @page {
-        size: 148mm 210mm;
-        margin: 0;
-      }
-
-      .hero {
-        height: 78mm;
-      }
-
-      .hero img {
-        object-position: 50% 40%;
-      }
-
-      .body {
-        padding: 8mm 11mm 0;
-      }
-
-      .eyebrow {
-        font-size: 7.6pt;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--gold);
-      }
-
-      h1 {
-        margin-top: 2mm;
-        font-size: 24pt;
-        line-height: 1;
-      }
-
-      .promise {
-        margin-top: 3.6mm;
-        font-size: 10pt;
-        line-height: 1.4;
-        color: var(--muted);
-      }
-
-      .front .cta {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 6mm 11mm 7mm;
-      }
-
-      .front .phone {
-        font-size: 20pt;
-      }
-
-      .front .cta p {
-        margin-top: 1.6mm;
-        font-size: 8.2pt;
-        color: rgb(232 215 184 / 78%);
-      }
-
-      .back {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
-
-      .band {
-        height: 42mm;
-      }
-
-      .band img {
-        object-position: 50% 60%;
-      }
-
-      .intro {
-        padding: 8mm 11mm 0;
-      }
-
-      .back h2 {
-        font-size: 20pt;
-        line-height: 1.05;
-        margin-top: 2mm;
-      }
-
-      .ask {
-        padding: 5mm 11mm 0;
-      }
-
-      .ask p {
-        font-size: 10pt;
-        line-height: 1.4;
-        color: var(--muted);
-      }
-
-      .ask ul {
-        margin-top: 4mm;
-        list-style: none;
-      }
-
-      .ask li {
-        padding: 2.6mm 0;
-        border-top: 0.25mm solid var(--line);
-        font-size: 10.5pt;
-        font-family: "Cormorant Garamond", serif;
-      }
-
-      .back .cta {
-        margin-top: auto;
-        padding: 5.5mm 11mm 6.5mm;
-        display: grid;
-        grid-template-columns: 1fr 20mm;
-        gap: 4mm;
-        align-items: center;
-      }
-
-      .back .phone {
-        font-size: 16pt;
-      }
-
-      .back .cta p {
-        margin-top: 1.2mm;
-        font-size: 7.8pt;
-        line-height: 1.35;
-        color: rgb(232 215 184 / 78%);
-      }
-
-      .qr {
-        width: 20mm;
-        height: 20mm;
-      }
+      @page { size: 148mm 210mm; margin: 0; }
+      body { background: #171210; color: #e8d7b8; font-family: Manrope, sans-serif; }
+      h1, h2, h3 { font-family: "Cormorant Garamond", serif; font-weight: 500; }
+      .front { background: #171210; color: #e8d7b8; display: flex; flex-direction: column; }
+      .top { padding: 8mm 8mm 0; }
+      .kicker { font-size: 7pt; letter-spacing: 0.16em; text-transform: uppercase; color: #c4a574; font-weight: 700; }
+      h1 { font-size: 26pt; line-height: 0.95; color: #e8d7b8; margin-top: 2mm; }
+      .pic { margin: 5mm 8mm 0; height: 70mm; overflow: hidden; }
+      .pic img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+      .lead { padding: 4mm 8mm 0; font-size: 9pt; line-height: 1.35; color: #e8d7b8; }
+      .bar { margin-top: auto; padding: 5mm 8mm; border-top: 0.3mm solid #c4a574; }
+      .bar strong { font-family: "Cormorant Garamond", serif; font-size: 16pt; color: #c4a574; font-weight: 500; }
+      .back { background: #fffaf3; color: #1c1612; padding: 7mm; height: 100%; display: flex; flex-direction: column; }
+      .item { padding: 2.6mm 0; border-bottom: 0.25mm solid #ddd2c0; display: grid; grid-template-columns: 8mm 1fr; gap: 2mm; }
+      .item svg { width: 7mm; height: 7mm; stroke: #8b6b3d; fill: none; stroke-width: 1.6; }
+      .item h3 { font-size: 13pt; line-height: 1; }
+      .item p { font-size: 7.6pt; line-height: 1.3; color: #3b2c20; margin-top: 0.6mm; }
+      .offer { margin-top: auto; background: #171210; color: #e8d7b8; padding: 4mm; }
+      .offer b { display: block; color: #c4a574; font-family: "Cormorant Garamond", serif; font-size: 13pt; font-weight: 500; }
+      .offer p { font-size: 7.5pt; line-height: 1.35; margin-top: 1mm; }
     </style>
   </head>
   <body>
-    <section class="sheet a5 paper front">
-      <div class="hero">
-        <img class="bleed-img" src="./img/print-leather-desk.png" alt="" />
+    <section class="sheet a5 front">
+      <div class="top">
+        <p class="kicker">Для собственников и юристов</p>
+        <h1>Доли ООО. В срок. Без второго визита.</h1>
       </div>
-      <div class="body">
-        <p class="eyebrow">Для собственников и юристов</p>
-        <h1>Доли ООО.<br />В срок. Без второго визита.</h1>
-        <p class="promise">
-          Нотариальную часть закроем в назначенный час. Комплект документов
-          согласуем по телефону — до того, как вы соберёте папку.
-        </p>
-      </div>
-      <div class="cta">
-        <div class="phone">+7 (495) 690-96-00</div>
-        <p>БЦ «Монарх» · м. Динамо · запись обязательна</p>
-      </div>
+      <div class="pic"><img src="./img/facade-arch.png" alt="" /></div>
+      <p class="lead">Комплект документов согласуем по телефону — до того, как соберёте папку. БЦ «Монарх», м. Динамо.</p>
+      <div class="bar"><strong>+7 (495) 690-96-00</strong></div>
     </section>
-
-    <section class="sheet a5 paper back">
-      <div class="band">
-        <img class="bleed-img" src="./img/print-city-dusk.png" alt="" />
-      </div>
-      <div class="intro">
-        <p class="eyebrow">Позвоните до собрания папки</p>
-        <h2>Иначе легко приехать без одной справки</h2>
-      </div>
-      <div class="ask">
-        <p>
-          Назовите действие — скажем, что реально нужно в этот визит, а что можно
-          не везти.
-        </p>
-        <ul>
-          <li>Отчуждение или залог доли</li>
-          <li>Подписи на формах для ФНС</li>
-          <li>Решение органа юрлица или опцион</li>
-        </ul>
-      </div>
-      <div class="cta">
-        <div>
-          <div class="phone">+7 (495) 690-96-00</div>
-          <p>Давыдова Е. П. · 29 этаж, офис 9<br />Пн–Пт 10:00–18:00</p>
-        </div>
-        <div class="qr">
-          <img src="./qr-site-gold.svg" alt="" />
-        </div>
+    <section class="sheet a5 back">
+      <p class="kicker">Юридическим лицам</p>
+      <h2 style="font-size:20pt;line-height:1;margin:1mm 0 1mm">Закроем нотариальную часть</h2>
+      <div class="item"><svg viewBox="0 0 24 24"><path d="M4 19V7h9v12"/><path d="M13 11h7v8H4"/></svg><div><h3>Сделки с долями</h3><p>Отчуждение и залог доли в уставном капитале ООО.</p></div></div>
+      <div class="item"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/></svg><div><h3>ФНС и регистрация</h3><p>Подписи на формах и представление документов на регистрацию.</p></div></div>
+      <div class="item"><svg viewBox="0 0 24 24"><path d="M5 6h14v12H5z"/><path d="M8 10h8M8 14h5"/></svg><div><h3>Решения и опционы</h3><p>Решения органов юрлица, карточка подписей, безотзывная оферта.</p></div></div>
+      <div class="item"><svg viewBox="0 0 24 24"><path d="M4 10l8-6 8 6v9H4z"/></svg><div><h3>Недвижимость компании</h3><p>Отчуждение и ипотека, если стороны готовы в день записи.</p></div></div>
+      <div class="offer">
+        <b>Первый звонок — список бумаг</b>
+        <p>Бесплатно до визита. Давыдова Е. П. · 29 этаж, офис 9 · Пн–Пт 10:00–18:00</p>
       </div>
     </section>
   </body>

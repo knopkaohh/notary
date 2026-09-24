@@ -2,127 +2,58 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Афиша A4 — запись</title>
+    <title>Афиша A4</title>
     <link rel="stylesheet" href="./styles.css" />
     <style>
-      @page {
-        size: A4;
-        margin: 0;
+      @page { size: A4; margin: 0; }
+      body { background: #fffaf3; color: #1c1612; font-family: Manrope, sans-serif; }
+      h1 { font-family: "Cormorant Garamond", serif; font-weight: 500; }
+      .sheet { background: #fffaf3; display: flex; flex-direction: column; }
+      .hero { height: 145mm; position: relative; }
+      .hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+      .hero .cap {
+        position: absolute; left: 12mm; right: 12mm; bottom: 10mm; color: #f7f0e4;
       }
-
-      .sheet {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .hero {
-        height: 188mm;
-        position: relative;
-      }
-
-      .hero img {
-        object-position: 50% 40%;
-      }
-
-      .veil {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          180deg,
-          rgb(23 18 16 / 8%) 0%,
-          rgb(23 18 16 / 0%) 35%,
-          rgb(23 18 16 / 55%) 100%
-        );
-      }
-
-      .hero-copy {
-        position: absolute;
-        left: 16mm;
-        right: 16mm;
-        bottom: 12mm;
-        color: var(--gold-soft);
-      }
-
-      .eyebrow {
-        font-size: 9pt;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--gold);
-      }
-
-      .hero h1 {
-        margin-top: 3mm;
-        font-size: 38pt;
-        line-height: 0.96;
-        color: #f7f0e4;
-      }
-
-      .rest {
-        flex: 1;
-        padding: 8mm 16mm 12mm;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 6mm;
-      }
-
-      .line {
-        font-size: 13pt;
-        line-height: 1.4;
-        color: var(--muted);
-        max-width: 150mm;
-      }
-
-      .cta {
-        margin-top: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8mm;
-        padding: 7mm 8mm;
-      }
-
-      .phone {
-        font-size: 26pt;
-        line-height: 1;
-      }
-
-      .cta p {
-        margin-top: 2mm;
-        font-size: 10pt;
-        color: rgb(232 215 184 / 78%);
-      }
-
-      .qr {
-        width: 24mm;
-        height: 24mm;
-        flex-shrink: 0;
-      }
+      .hero h1 { font-size: 36pt; line-height: 0.92; color: #f7f0e4; text-shadow: 0 2mm 8mm rgb(23 18 16 / 45%); }
+      .kicker { font-size: 8pt; letter-spacing: 0.18em; text-transform: uppercase; color: #c4a574; font-weight: 700; }
+      .rest { flex: 1; padding: 8mm 12mm 10mm; display: flex; flex-direction: column; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4mm; }
+      .cols article { border-top: 0.4mm solid #c4a574; padding-top: 2.5mm; }
+      .cols h2 { font-family: "Cormorant Garamond", serif; font-size: 14pt; font-weight: 500; }
+      .cols p { margin-top: 1mm; font-size: 8pt; line-height: 1.35; color: #3b2c20; }
+      .bar { margin-top: auto; background: #171210; color: #e8d7b8; display: flex; justify-content: space-between; align-items: center; gap: 6mm; padding: 5mm 6mm; }
+      .bar strong { display: block; font-family: "Cormorant Garamond", serif; font-size: 22pt; color: #c4a574; font-weight: 500; }
+      .bar span { font-size: 8.5pt; }
+      .side { display: flex; align-items: center; gap: 4mm; }
+      .side img { width: 22mm; height: 28mm; object-fit: contain; }
+      .qr { width: 22mm; height: 22mm; background: #fffaf3; padding: 1mm; }
+      .qr img { width: 100%; height: 100%; }
     </style>
   </head>
   <body>
-    <section class="sheet a4 paper">
+    <section class="sheet a4">
       <div class="hero">
-        <img class="bleed-img" src="./img/print-empty-room.png" alt="" />
-        <div class="veil"></div>
-        <div class="hero-copy">
-          <p class="eyebrow">Нотариус у метро Динамо</p>
+        <img src="./img/facade-arch.png" alt="" />
+        <div class="cap">
+          <p class="kicker">Нотариус у метро Динамо</p>
           <h1>Запишитесь.<br />Приедете без очереди.</h1>
         </div>
       </div>
       <div class="rest">
-        <p class="line">
-          Доверенность, согласие, сделка или доли ООО — сначала звонок, потом
-          визит в БЦ «Монарх». Подскажем, что взять с собой.
-        </p>
-        <div class="cta">
-          <div>
-            <div class="phone">+7 (495) 690-96-00</div>
-            <p>Давыдова Евгения Петровна · Пн–Пт 10:00–18:00 · 29 этаж</p>
+        <div class="cols">
+          <article><h2>Семьям</h2><p>Доверенности, согласия, брачный договор, завещание и наследство.</p></article>
+          <article><h2>Компаниям</h2><p>Доли ООО, подписи для ФНС, решения органов, опционы.</p></article>
+          <article><h2>Первый звонок</h2><p>Список документов — бесплатно, до визита. Потом свой час в БЦ «Монарх».</p></article>
+        </div>
+        <div class="bar">
+          <div class="side">
+            <img src="./img/laurel-halftone.png" alt="" />
+            <div>
+              <strong>+7 (495) 690-96-00</strong>
+              <span>Давыдова Евгения Петровна · Пн–Пт 10:00–18:00 · 29 этаж</span>
+            </div>
           </div>
-          <div class="qr">
-            <img src="./qr-site-gold.svg" alt="" />
-          </div>
+          <div class="qr"><img src="./qr-site-gold.svg" alt="" /></div>
         </div>
       </div>
     </section>
