@@ -56,9 +56,44 @@ export function PrintKit() {
         Листовки, которые просят позвонить
       </h1>
       <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-        Новый набор: обезличенные кадры, один оффер на макет и телефон как главное
-        действие. Не каталог с сайта и не фото приёмной.
+        Буклет в цветах сайта: эспрессо, золото и кремовая бумага. Ниже мокап,
+        как его увидит клиент, и PDF для типографии.
       </p>
+
+      <figure className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-[0_24px_60px_rgb(23_18_16_/_0.12)]">
+        <Image
+          src="/print/buklet-mockup.png"
+          alt="Мокап буклета на ткани: наружная и внутренняя стороны"
+          width={1080}
+          height={1620}
+          className="h-auto w-full"
+          priority
+        />
+      </figure>
+      <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+        <a
+          href="/print/buklet-mockup.pdf"
+          download
+          className={cn(
+            buttonVariants(),
+            "h-11 rounded-full bg-espresso px-5 text-gold hover:bg-espresso/90"
+          )}
+        >
+          <Download className="size-4" />
+          Скачать мокап PDF
+        </a>
+        <a
+          href="/print/buklet-a4.pdf"
+          download
+          className={cn(
+            buttonVariants({ variant: "outline" }),
+            "h-11 rounded-full px-5"
+          )}
+        >
+          <Download className="size-4" />
+          PDF для печати
+        </a>
+      </div>
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (

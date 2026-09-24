@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Мокап буклета</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 1080px; height: 1620px; overflow: hidden; }
+      body {
+        background: #ece6dc url("./img/mockup-silk.png") center / cover no-repeat;
+      }
+      .stage {
+        width: 1080px;
+        height: 1620px;
+        padding: 70px 64px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .spread {
+        position: relative;
+        background: #f4eee4;
+        box-shadow:
+          0 28px 50px rgb(40 28 18 / 22%),
+          0 6px 16px rgb(40 28 18 / 12%);
+      }
+      .spread img { display: block; width: 100%; height: auto; }
+      .spread::before,
+      .spread::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        pointer-events: none;
+        z-index: 2;
+      }
+      .spread::before {
+        left: calc(33.333% - 5px);
+        background: linear-gradient(90deg, transparent, rgb(23 18 16 / 16%), transparent);
+      }
+      .spread::after {
+        left: calc(66.666% - 5px);
+        background: linear-gradient(90deg, transparent, rgb(23 18 16 / 16%), transparent);
+      }
+      .top { transform: rotate(-0.6deg); }
+      .bottom { transform: rotate(0.45deg); }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="spread top">
+        <img src="/print/previews/buklet-a4-1.png" alt="" />
+      </div>
+      <div class="spread bottom">
+        <img src="/print/previews/buklet-a4-2.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

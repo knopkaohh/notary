@@ -5,333 +5,229 @@
     <title>Буклет — три фальца</title>
     <link rel="stylesheet" href="./styles.css" />
     <style>
-      @page {
-        size: A4 landscape;
-        margin: 0;
-      }
-
-      body {
-        background: #fff;
-        color: #1a1a1a;
-        font-family: Manrope, "Helvetica Neue", sans-serif;
-      }
-
-      h1,
-      h2,
-      h3,
-      .serif {
-        font-family: Manrope, "Helvetica Neue", sans-serif;
-        font-weight: 500;
-      }
-
-      .sheet {
-        background: #fff;
-        color: #1a1a1a;
-      }
-
-      .panel {
-        padding: 12mm 9mm 10mm;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .label {
-        font-size: 8pt;
-        font-weight: 600;
-        letter-spacing: 0.22em;
+      @page { size: A4 landscape; margin: 0; }
+      body { background: #f4eee4; color: #1c1612; font-family: Manrope, sans-serif; }
+      h1, h2, h3 { font-family: "Cormorant Garamond", serif; font-weight: 500; color: #171210; }
+      .sheet { background: #f4eee4; color: #1c1612; }
+      .panel { padding: 8mm 7mm 7mm; display: flex; flex-direction: column; }
+      .kicker {
+        font-family: Manrope, sans-serif;
+        font-size: 7.4pt;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
+        color: #8b6b3d;
       }
-
-      .muted {
-        color: #6d6d6d;
-        font-size: 8pt;
-        line-height: 1.55;
-      }
-
-      .about p {
-        margin-top: 5mm;
-      }
-
-      .about .site {
+      .rule { height: 0.35mm; background: #c4a574; border: 0; margin: 3mm 0; }
+      .muted { font-size: 8.4pt; line-height: 1.45; color: #3b2c20; }
+      .about h2 { font-size: 22pt; line-height: 0.95; margin-top: 2mm; }
+      .about p { margin-top: 3.2mm; }
+      .about .foot {
         margin-top: auto;
-        font-size: 8pt;
-        color: #1a1a1a;
+        background: #171210;
+        color: #e8d7b8;
+        padding: 4mm 4.2mm;
       }
-
-      .contacts {
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        gap: 5.5mm;
-      }
-
-      .contacts .block strong {
+      .about .foot strong {
         display: block;
-        font-size: 8pt;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        margin-bottom: 1.2mm;
-      }
-
-      .contacts .block p {
-        font-size: 8pt;
-        line-height: 1.45;
-        color: #4a4a4a;
-      }
-
-      .contacts .qr {
-        width: 18mm;
-        height: 18mm;
-      }
-
-      .cover {
-        padding: 0;
-        position: relative;
-      }
-
-      .cover .top {
-        padding: 12mm 9mm 0;
-      }
-
-      .cover h1 {
-        font-size: 26pt;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14pt;
         font-weight: 500;
-        letter-spacing: -0.03em;
-        line-height: 1;
+        color: #c4a574;
       }
-
-      .cover .tag {
-        margin-top: 1.5mm;
-        font-size: 8pt;
+      .about .foot span { display: block; margin-top: 1mm; font-size: 7.6pt; color: #e8d7b8; }
+      .contacts { background: #171210; color: #e8d7b8; justify-content: space-between; }
+      .contacts h2 { color: #e8d7b8; font-size: 22pt; line-height: 1; }
+      .contacts .row { border-top: 0.25mm solid rgb(196 165 116 / 45%); padding-top: 2.6mm; }
+      .contacts .row b {
+        display: block;
+        font-size: 7pt;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: #8a8a8a;
-      }
-
-      .cover .pic {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 128mm;
-      }
-
-      .cover .pic img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 40%;
-      }
-
-      .inside-lead h2 {
-        margin-top: 6mm;
-        font-size: 22pt;
-        font-weight: 500;
-        letter-spacing: -0.03em;
-        line-height: 0.95;
-        text-transform: uppercase;
-      }
-
-      .inside-lead .intro {
-        margin: 5mm 0 6mm;
-      }
-
-      .svc h3 {
-        font-size: 11pt;
+        color: #c4a574;
         font-weight: 600;
-        letter-spacing: -0.02em;
       }
-
-      .svc .desc {
-        margin-top: 1.4mm;
-        font-size: 7.6pt;
-        line-height: 1.4;
-        color: #6d6d6d;
+      .contacts .row p { margin-top: 1mm; font-size: 9pt; line-height: 1.35; color: #e8d7b8; }
+      .contacts .phone {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16pt;
+        color: #c4a574;
+        line-height: 1;
       }
-
-      .row {
+      .qr-row { display: flex; align-items: center; gap: 3mm; }
+      .qr-row .qr { width: 16mm; height: 16mm; background: #f4eee4; padding: 1mm; }
+      .qr-row p { font-size: 7.4pt; line-height: 1.35; color: #e8d7b8; }
+      .cover { padding: 0; background: #171210; color: #e8d7b8; position: relative; }
+      .cover .top { padding: 8mm 7mm 0; position: relative; z-index: 2; }
+      .cover h1 { color: #e8d7b8; font-size: 32pt; line-height: 0.9; }
+      .cover h1 em { display: block; font-style: italic; color: #c4a574; font-size: 22pt; }
+      .cover .tag {
+        margin-top: 2mm;
+        font-size: 7.4pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #c4a574;
+      }
+      .cover .pic { position: absolute; left: 0; right: 0; bottom: 0; height: 118mm; }
+      .cover .pic img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+      .cover .veil {
+        position: absolute; inset: 0;
+        background: linear-gradient(180deg, #171210 0%, rgb(23 18 16 / 20%) 28%, rgb(23 18 16 / 15%) 55%, #171210 100%);
+      }
+      .lead h2 { font-size: 26pt; line-height: 0.92; margin-top: 1.5mm; }
+      .lead .intro { margin: 3mm 0 3.5mm; }
+      .card {
+        background: #fffaf3;
+        border: 0.25mm solid #ddd2c0;
+        padding: 3mm 3.2mm;
         display: grid;
-        grid-template-columns: 1fr 28mm;
-        gap: 3mm;
+        grid-template-columns: 1fr 24mm;
+        gap: 2.5mm;
         align-items: center;
       }
-
-      .thumb {
-        width: 28mm;
-        height: 34mm;
-        object-fit: contain;
+      .card h3 { font-size: 14pt; line-height: 1; }
+      .card p { margin-top: 1mm; font-size: 7.6pt; line-height: 1.35; color: #6d5e4e; }
+      .card ul { margin-top: 1.6mm; list-style: none; }
+      .card li { font-size: 7.4pt; line-height: 1.35; color: #1c1612; padding-left: 2.8mm; position: relative; }
+      .card li::before {
+        content: ""; position: absolute; left: 0; top: 1.5mm;
+        width: 1.2mm; height: 1.2mm; border-radius: 50%; background: #c4a574;
       }
-
-      .points {
-        margin-top: 2.4mm;
-        list-style: none;
-      }
-
-      .points li {
-        font-size: 7.2pt;
-        color: #4a4a4a;
-        line-height: 1.35;
-        padding-left: 3mm;
-        position: relative;
-      }
-
-      .points li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 1.6mm;
-        width: 1.1mm;
-        height: 1.1mm;
-        border-radius: 50%;
-        background: #1a1a1a;
-      }
-
-      .stack {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-      }
-
-      .stack article {
-        padding-bottom: 2mm;
-      }
+      .card img { width: 24mm; height: 28mm; object-fit: cover; background: #f4eee4; }
+      .stack { display: flex; flex-direction: column; justify-content: space-between; height: 100%; gap: 3.5mm; }
+      .stack .card { flex: 1; }
+      .panel-mid, .panel-right { background: #f4eee4; }
     </style>
   </head>
   <body>
-    <!-- Снаружи, слева направо: задняя обложка · контакты · лицо -->
     <section class="sheet a4-land">
       <div class="panel panel-1 about">
-        <p class="label">О нотариусе</p>
+        <p class="kicker">О нотариусе</p>
+        <h2>Документ, который примут с первого раза</h2>
+        <hr class="rule" />
         <p class="muted">
-          Давыдова Евгения Петровна принимает в БЦ «Монарх», в пяти минутах от
-          метро Динамо. Сюда приезжают за доверенностью, сделкой или наследством
-          уже со списком бумаг — без очереди в коридоре.
+          Евгения Петровна Давыдова — нотариус Москвы. Офис в БЦ «Монарх»,
+          пять минут от метро Динамо. Доверенность, сделка, наследство или доли ООО.
         </p>
         <p class="muted">
-          Сначала звонок. Скажем, кто должен прийти и что взять с собой. Документ
-          готовят так, чтобы его приняли банк, Росреестр или налоговая.
+          Позвоните до визита. Скажем, кто должен прийти и что взять. Приедете
+          к своему часу и уйдёте с готовым актом — без очереди в коридоре.
         </p>
-        <p class="site">davydova-notarius.ru</p>
+        <p class="muted">
+          Реестр 77/833-н/77. Будни 10:00–18:00, без перерыва.
+        </p>
+        <div class="foot">
+          <strong>+7 (495) 690-96-00</strong>
+          <span>Запись по телефону · davydova-notarius.ru</span>
+        </div>
       </div>
 
       <div class="panel panel-2 contacts">
-        <div class="block">
-          <strong>Адрес</strong>
-          <p>
-            Ленинградский проспект, 31А, стр. 1<br />
-            БЦ «Монарх», 29 этаж, офис 9<br />
-            м. Динамо / м. Беговая
-          </p>
+        <div>
+          <p class="kicker">Как добраться</p>
+          <h2>БЦ «Монарх»,<br />29 этаж</h2>
         </div>
-        <div class="block">
-          <strong>Телефон</strong>
-          <p>+7 (495) 690-96-00<br />+7 (903) 969-40-04</p>
+        <div class="row">
+          <b>Адрес</b>
+          <p>Ленинградский пр-т, 31А, стр. 1<br />офис 9 · м. Динамо / м. Беговая</p>
         </div>
-        <div class="block">
-          <strong>Почта</strong>
-          <p>6909600@bk.ru</p>
+        <div class="row">
+          <b>Телефон</b>
+          <p class="phone">+7 (495) 690-96-00</p>
+          <p>+7 (903) 969-40-04</p>
         </div>
-        <div class="block">
-          <strong>Часы</strong>
-          <p>Пн–Пт · 10:00–18:00<br />Сб, Вс — выходной</p>
+        <div class="row">
+          <b>Почта и часы</b>
+          <p>6909600@bk.ru<br />Пн–Пт 10:00–18:00 · Сб и Вс выходной</p>
         </div>
-        <div class="qr"><img src="./qr-site.svg" alt="" /></div>
+        <div class="qr-row">
+          <div class="qr"><img src="./qr-site.svg" alt="" /></div>
+          <p>Сайт и запись<br />davydova-notarius.ru</p>
+        </div>
       </div>
 
       <div class="panel panel-3 cover">
+        <div class="pic"><img src="./img/cover-envelope.png" alt="" /><div class="veil"></div></div>
         <div class="top">
-          <h1>Давыдова</h1>
-          <p class="tag">Нотариус Москвы</p>
+          <p class="tag">Нотариус города Москвы</p>
+          <h1>Давыдова<em>Евгения Петровна</em></h1>
         </div>
-        <div class="pic">
-          <img src="./img/cover-envelope.png" alt="" />
+        <div class="top" style="position:absolute;left:0;right:0;bottom:0;padding:8mm 7mm">
+          <p class="tag">Позвоните — приедете без очереди</p>
+          <p class="phone" style="font-family:'Cormorant Garamond',serif;font-size:18pt;color:#c4a574;margin-top:1mm">+7 (495) 690-96-00</p>
         </div>
       </div>
     </section>
 
-    <!-- Внутри, слева направо: оффер · две услуги · две услуги -->
     <section class="sheet a4-land">
-      <div class="panel panel-1 inside-lead">
-        <h2>Приедете<br />уже со<br />списком</h2>
+      <div class="panel panel-1 lead">
+        <p class="kicker">Зачем звонить</p>
+        <h2>Приедете уже со списком</h2>
         <p class="muted intro">
-          Один звонок заменяет лишний визит. Назовите действие — получите, что
-          везти и кто должен прийти.
+          Один звонок заменяет лишний визит. Назовите действие — скажем, что везти
+          и кто должен прийти. Так час в офисе не уходит на пустую папку.
         </p>
-        <article class="svc">
-          <div class="row">
-            <div>
-              <h3>Доверенности</h3>
-              <p class="desc">На автомобиль, в суд, генеральная — часто в день записи.</p>
-              <ul class="points">
-                <li>Формулировку скажем по телефону</li>
-                <li>Примут банк и госорган</li>
-                <li>Без очереди, к своему часу</li>
-              </ul>
-            </div>
-            <img class="thumb" src="./img/obj-keys.png" alt="" />
+        <article class="card">
+          <div>
+            <h3>Доверенности</h3>
+            <p>Автомобиль, суд, генеральная. Часто в день записи.</p>
+            <ul>
+              <li>Формулировку скажем по телефону</li>
+              <li>Примут банк и госорган</li>
+              <li>К своему часу, без очереди</li>
+            </ul>
           </div>
+          <img src="./img/obj-keys.png" alt="" />
         </article>
       </div>
-
-      <div class="panel panel-2">
+      <div class="panel panel-2 panel-mid">
         <div class="stack">
-          <article class="svc">
-            <div class="row">
-              <div>
-                <h3>Недвижимость</h3>
-                <p class="desc">Квартира, доля, ипотека — ставим на конкретный час.</p>
-                <ul class="points">
-                  <li>Список бумаг до визита</li>
-                  <li>Без второго круга</li>
-                </ul>
-              </div>
-              <img class="thumb" src="./img/obj-cards.png" alt="" />
+          <article class="card">
+            <div>
+              <h3>Недвижимость</h3>
+              <p>Квартира, доля, ипотека — на конкретный час.</p>
+              <ul>
+                <li>Список бумаг до визита</li>
+                <li>Без второго круга</li>
+              </ul>
             </div>
+            <img src="./img/obj-cards.png" alt="" />
           </article>
-          <article class="svc">
-            <div class="row">
-              <div>
-                <h3>Наследство</h3>
-                <p class="desc">Завещание или открытие дела. Не везите все папки сразу.</p>
-                <ul class="points">
-                  <li>С чего начать — по телефону</li>
-                  <li>Только нужные документы</li>
-                </ul>
-              </div>
-              <img class="thumb" src="./img/obj-folder.png" alt="" />
+          <article class="card">
+            <div>
+              <h3>Наследство</h3>
+              <p>Завещание или открытие дела. Не везите все папки.</p>
+              <ul>
+                <li>С чего начать — по телефону</li>
+                <li>Только нужные документы</li>
+              </ul>
             </div>
+            <img src="./img/obj-folder.png" alt="" />
           </article>
         </div>
       </div>
-
-      <div class="panel panel-3">
+      <div class="panel panel-3 panel-right">
         <div class="stack">
-          <article class="svc">
-            <div class="row">
-              <div>
-                <h3>Семья</h3>
-                <p class="desc">Согласие на выезд, брачный договор, алименты.</p>
-                <ul class="points">
-                  <li>Один приём, если бумаги с собой</li>
-                  <li>Подскажем состав заранее</li>
-                </ul>
-              </div>
-              <img class="thumb" src="./img/obj-cups.png" alt="" />
+          <article class="card">
+            <div>
+              <h3>Семья</h3>
+              <p>Согласие на выезд, брачный договор, алименты.</p>
+              <ul>
+                <li>Один приём, если бумаги с собой</li>
+                <li>Состав скажем заранее</li>
+              </ul>
             </div>
+            <img src="./img/obj-cups.png" alt="" />
           </article>
-          <article class="svc">
-            <div class="row">
-              <div>
-                <h3>Компаниям</h3>
-                <p class="desc">Доли ООО, подписи для ФНС, опцион.</p>
-                <ul class="points">
-                  <li>Комплект согласуем до папки</li>
-                  <li>Без срыва срока регистрации</li>
-                </ul>
-              </div>
-              <img class="thumb" src="./img/obj-notebook.png" alt="" />
+          <article class="card">
+            <div>
+              <h3>Компаниям</h3>
+              <p>Доли ООО, подписи для ФНС, опцион.</p>
+              <ul>
+                <li>Комплект до сбора папки</li>
+                <li>Без срыва регистрации</li>
+              </ul>
             </div>
+            <img src="./img/obj-notebook.png" alt="" />
           </article>
         </div>
       </div>
