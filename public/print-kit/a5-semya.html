@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Листовка A5 — семьи</title>
+    <title>Листовка A5 — запись без очереди</title>
     <link rel="stylesheet" href="./styles.css" />
     <style>
       @page {
@@ -10,219 +10,172 @@
         margin: 0;
       }
 
-      .front .pad {
-        padding: 14mm 13mm 12mm;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+      .hero {
+        height: 86mm;
       }
 
-      .front .photo {
-        height: 62mm;
-        border-radius: 3mm;
-        margin: 7mm 0 6mm;
+      .hero img {
+        object-position: 50% 45%;
       }
 
-      .front .name .last {
-        font-size: 30pt;
-      }
-      .front .name .first {
-        font-size: 27pt;
+      .body {
+        padding: 8mm 11mm 0;
       }
 
-      .front .lead {
-        margin-top: 5mm;
-        max-width: 112mm;
-        color: rgb(232 215 184 / 82%);
-      }
-
-      .front .meta {
-        margin-top: auto;
-        display: grid;
-        gap: 2.2mm;
-        font-size: 9pt;
-        color: rgb(232 215 184 / 72%);
-      }
-
-      .front .phone {
-        margin-top: 5mm;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 18pt;
+      .eyebrow {
+        font-size: 7.6pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
         color: var(--gold);
       }
 
-      .back .pad {
-        padding: 13mm 12mm 11mm;
+      h1 {
+        margin-top: 2.2mm;
+        font-size: 26pt;
+        line-height: 0.98;
+      }
+
+      .promise {
+        margin-top: 4mm;
+        font-size: 10.2pt;
+        line-height: 1.4;
+        color: var(--muted);
+        max-width: 118mm;
+      }
+
+      .front .cta {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 6mm 11mm 7mm;
+      }
+
+      .front .cta .phone {
+        font-size: 20pt;
+        line-height: 1;
+      }
+
+      .front .cta p {
+        margin-top: 1.6mm;
+        font-size: 8.2pt;
+        color: rgb(232 215 184 / 78%);
+      }
+
+      .back {
         display: flex;
         flex-direction: column;
         height: 100%;
+      }
+
+      .back .intro {
+        padding: 11mm 11mm 0;
       }
 
       .back h2 {
         font-size: 22pt;
-        line-height: 1.05;
-        margin: 2mm 0 4mm;
+        line-height: 1.02;
+        margin-top: 2mm;
       }
 
-      .grid {
+      .reasons {
+        padding: 6mm 11mm 0;
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 3.2mm;
       }
 
-      .card {
+      .reasons article {
         background: var(--card);
-        border: 0.25mm solid var(--line);
-        border-radius: 2.4mm;
-        padding: 3.2mm 3.4mm 3mm;
+        border-left: 1.1mm solid var(--gold);
+        padding: 3.4mm 4mm 3.6mm 4.5mm;
       }
 
-      .card h3 {
-        font-size: 12.5pt;
-        margin-bottom: 1mm;
+      .reasons h3 {
+        font-size: 13.5pt;
+        line-height: 1.15;
       }
 
-      .card p {
-        font-size: 8pt;
+      .reasons p {
+        margin-top: 1mm;
+        font-size: 8.4pt;
         line-height: 1.35;
         color: var(--muted);
       }
 
-      .steps {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2.5mm;
-        margin-top: 5mm;
-      }
-
-      .steps article {
-        border-top: 0.3mm solid var(--gold);
-        padding-top: 2.4mm;
-      }
-
-      .steps .n {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 16pt;
-        color: var(--gold);
-      }
-
-      .steps h3 {
-        font-size: 10.5pt;
-        line-height: 1.2;
-        margin: 1mm 0;
-      }
-
-      .steps p {
-        font-size: 7.4pt;
-        line-height: 1.35;
-        color: var(--muted);
-      }
-
-      .foot {
+      .back .cta {
         margin-top: auto;
-        background: var(--espresso);
-        color: var(--gold-soft);
-        border-radius: 2.6mm;
-        padding: 4.2mm 4.5mm;
         display: grid;
-        grid-template-columns: 1fr 22mm;
-        gap: 3mm;
+        grid-template-columns: 1fr 20mm;
+        gap: 4mm;
         align-items: center;
+        padding: 5.5mm 11mm 6.5mm;
       }
 
-      .foot p {
-        font-size: 8pt;
-        line-height: 1.4;
-        color: rgb(232 215 184 / 80%);
+      .back .phone {
+        font-size: 16pt;
       }
 
-      .foot strong {
-        display: block;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 13pt;
-        font-weight: 500;
-        color: var(--gold);
-        margin-bottom: 1mm;
+      .back .cta p {
+        margin-top: 1.2mm;
+        font-size: 7.8pt;
+        line-height: 1.35;
+        color: rgb(232 215 184 / 78%);
+      }
+
+      .qr {
+        width: 20mm;
+        height: 20mm;
       }
     </style>
   </head>
   <body>
-    <section class="sheet a5 ink front">
-      <div class="frame"></div>
-      <div class="inner pad">
-        <p class="kicker">Нотариус города Москвы · 77/833-н/77</p>
-        <div class="photo">
-          <img src="/notary-office.jpg" alt="Кабинет нотариуса" />
-        </div>
-        <h1 class="name">
-          <span class="last">Давыдова</span>
-          <span class="first">Евгения Петровна</span>
-        </h1>
-        <p class="lead">
-          Доверенность, согласие, наследство или семейное соглашение — в БЦ
-          «Монарх» у метро Динамо. Запишитесь заранее и приезжайте без очереди.
+    <section class="sheet a5 paper front">
+      <div class="hero">
+        <img class="bleed-img" src="./img/print-keys-folder.png" alt="" />
+      </div>
+      <div class="body">
+        <p class="eyebrow">Нотариус у метро Динамо</p>
+        <h1>Доверенность&nbsp;— сегодня. Без&nbsp;очереди.</h1>
+        <p class="promise">
+          Позвоните. Скажем, какие бумаги взять. Приедете в БЦ «Монарх» к
+          назначенному часу и уйдёте с готовым документом.
         </p>
-        <p class="phone">+7 (495) 690-96-00</p>
-        <div class="meta">
-          <div>м. Динамо / м. Беговая · 29 этаж, офис 9</div>
-          <div>Пн–Пт с 10:00 до 18:00 без перерыва</div>
-          <div>davydova-notarius.ru</div>
-        </div>
+      </div>
+      <div class="cta">
+        <div class="phone">+7 (495) 690-96-00</div>
+        <p>Запись по телефону · Пн–Пт 10:00–18:00</p>
       </div>
     </section>
 
     <section class="sheet a5 paper back">
-      <div class="frame soft"></div>
-      <div class="inner pad">
-        <p class="kicker muted">Для семей</p>
-        <h2>Что оформляем за один визит</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Доверенности</h3>
-            <p>На автомобиль, судебные, генеральные — примут банки и госорганы.</p>
-          </article>
-          <article class="card">
-            <h3>Согласия</h3>
-            <p>На выезд ребёнка, на сделку супруга, на регистрацию.</p>
-          </article>
-          <article class="card">
-            <h3>Семья</h3>
-            <p>Брачный договор, раздел имущества, алименты, воспитание ребёнка.</p>
-          </article>
-          <article class="card">
-            <h3>Наследство</h3>
-            <p>Завещание, открытие наследства, свидетельства о праве.</p>
-          </article>
+      <div class="intro">
+        <p class="eyebrow">Зачем звонить заранее</p>
+        <h2>Не тратьте визит впустую</h2>
+      </div>
+      <div class="reasons">
+        <article>
+          <h3>Ребёнок улетает на каникулы</h3>
+          <p>Согласие на выезд оформляем в один приём — если документы на месте.</p>
+        </article>
+        <article>
+          <h3>Нужна доверенность «ещё вчера»</h3>
+          <p>Банк, суд или ГАИ. Скажем по телефону, какая формулировка пройдёт.</p>
+        </article>
+        <article>
+          <h3>Наследство или семейное соглашение</h3>
+          <p>Начнём со списка бумаг, а не с напрасной поездки на 29 этаж.</p>
+        </article>
+      </div>
+      <div class="cta">
+        <div>
+          <div class="phone">+7 (495) 690-96-00</div>
+          <p>
+            Давыдова Евгения Петровна<br />
+            БЦ «Монарх», Ленинградский пр-т, 31А
+          </p>
         </div>
-        <div class="steps">
-          <article>
-            <div class="n">01</div>
-            <h3>Позвоните</h3>
-            <p>Назовите действие — подскажем список документов.</p>
-          </article>
-          <article>
-            <div class="n">02</div>
-            <h3>Приезжайте</h3>
-            <p>БЦ «Монарх», Ленинградский пр-т, 31А, стр. 1.</p>
-          </article>
-          <article>
-            <div class="n">03</div>
-            <h3>Получите акт</h3>
-            <p>Удостоверение и документ на руки в день визита.</p>
-          </article>
-        </div>
-        <div class="foot">
-          <div>
-            <strong>+7 (495) 690-96-00</strong>
-            <p>
-              г. Москва, Ленинградский проспект, 31А, стр. 1,<br />
-              БЦ «Монарх», 29 этаж, офис 9<br />
-              6909600@bk.ru
-            </p>
-          </div>
-          <div class="qr">
-            <img src="./qr-site-gold.svg" alt="QR на сайт" />
-          </div>
+        <div class="qr">
+          <img src="./qr-site-gold.svg" alt="" />
         </div>
       </div>
     </section>

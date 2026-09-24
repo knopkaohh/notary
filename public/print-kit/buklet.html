@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Буклет A4 — раскладушка</title>
+    <title>Буклет A4</title>
     <link rel="stylesheet" href="./styles.css" />
     <style>
       @page {
@@ -11,378 +11,289 @@
       }
 
       .panel {
-        padding: 11mm 9mm 10mm;
+        padding: 10mm 8.5mm 9mm;
+        display: flex;
+        flex-direction: column;
       }
 
-      .panel h2 {
-        font-size: 20pt;
-        line-height: 1.08;
-        margin: 2mm 0 4mm;
+      .eyebrow {
+        font-size: 7.2pt;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+
+      h1,
+      h2 {
+        margin-top: 2.2mm;
+        font-size: 22pt;
+        line-height: 1.02;
       }
 
       .cover {
+        padding: 0;
+      }
+
+      .cover .pic {
+        position: absolute;
+        inset: 0;
+      }
+
+      .cover .pic img {
+        object-position: 70% 35%;
+      }
+
+      .cover .veil {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgb(23 18 16 / 5%) 20%,
+          rgb(23 18 16 / 78%) 100%
+        );
+      }
+
+      .cover .pad {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10mm 8.5mm 9mm;
         display: flex;
         flex-direction: column;
-        height: 100%;
       }
 
-      .cover .photo {
-        height: 68mm;
-        border-radius: 3mm;
-        margin: 7mm 0 6mm;
-      }
-
-      .cover .name .last {
-        font-size: 28pt;
-      }
-      .cover .name .first {
-        font-size: 24pt;
-      }
-
-      .cover .lead {
-        margin-top: 4mm;
-        color: rgb(232 215 184 / 82%);
-        font-size: 10pt;
+      .cover h1 {
+        font-size: 23pt;
+        color: #f7f0e4;
       }
 
       .cover .phone {
-        margin-top: auto;
+        margin-top: 8mm;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 15pt;
+        color: var(--gold);
+      }
+
+      .cover .fine {
+        margin-top: 1.4mm;
+        font-size: 7.6pt;
+        color: rgb(232 215 184 / 72%);
+      }
+
+      .flap p,
+      .story p,
+      .why p {
+        margin-top: 3.5mm;
+        font-size: 9pt;
+        line-height: 1.42;
+        color: var(--muted);
+      }
+
+      .chip {
+        margin-top: 4mm;
+        background: var(--card);
+        border-left: 1mm solid var(--gold);
+        padding: 3.2mm 3.6mm;
+      }
+
+      .chip strong {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 12.5pt;
+        font-weight: 500;
+        color: var(--ink);
+      }
+
+      .chip span {
+        display: block;
+        margin-top: 1mm;
+        font-size: 8pt;
+        line-height: 1.35;
+        color: var(--muted);
+      }
+
+      .back .pic {
+        height: 36mm;
+        margin: 5mm -8.5mm 0;
+      }
+
+      .back .pic img {
+        object-position: 50% 70%;
+      }
+
+      .back .phone {
+        margin-top: 5mm;
         font-family: "Cormorant Garamond", serif;
         font-size: 16pt;
         color: var(--gold);
       }
 
-      .cover .fine {
-        margin-top: 2mm;
-        font-size: 8pt;
-        color: rgb(232 215 184 / 68%);
-        line-height: 1.4;
-      }
-
       .back .addr {
-        margin-top: 5mm;
-        font-size: 9.2pt;
-        line-height: 1.5;
+        margin-top: 2mm;
+        font-size: 8.2pt;
+        line-height: 1.45;
+        color: rgb(232 215 184 / 78%);
       }
 
-      .back .phone {
-        margin: 6mm 0 3mm;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 18pt;
-        color: var(--gold);
-      }
-
-      .hours-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 5mm;
-        font-size: 8.4pt;
-      }
-
-      .hours-table td {
-        padding: 1.7mm 0;
-        border-bottom: 0.2mm solid rgb(196 165 116 / 28%);
-      }
-
-      .hours-table td:last-child {
-        text-align: right;
-      }
-
-      .back .qr-row {
+      .qr-row {
         margin-top: auto;
         display: flex;
         align-items: center;
-        gap: 3.5mm;
+        gap: 3mm;
       }
 
-      .back .qr-row p {
-        font-size: 8pt;
+      .qr {
+        width: 18mm;
+        height: 18mm;
+      }
+
+      .qr-row p {
+        font-size: 7.6pt;
         line-height: 1.35;
         color: rgb(232 215 184 / 75%);
       }
 
-      .flap .box {
-        border: 0.3mm solid rgb(196 165 116 / 40%);
-        border-radius: 2.6mm;
-        padding: 4mm;
-        margin-top: 4mm;
+      .story article {
+        margin-top: 4.2mm;
       }
 
-      .flap .box h3 {
-        font-size: 13pt;
-        color: var(--gold);
-        margin-bottom: 1.6mm;
-      }
-
-      .flap .box p {
-        font-size: 8.6pt;
-        line-height: 1.4;
-        color: rgb(232 215 184 / 78%);
-      }
-
-      .about p {
-        font-size: 9pt;
-        line-height: 1.45;
-        color: var(--muted);
-      }
-
-      .about .quote {
-        margin: 4mm 0 5mm;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 14pt;
-        line-height: 1.25;
-        color: var(--ink);
-      }
-
-      .adv {
-        margin-top: 2mm;
-      }
-
-      .adv article {
-        padding: 2.6mm 0;
-        border-top: 0.2mm solid var(--line);
-      }
-
-      .adv h3 {
-        font-size: 12pt;
-      }
-
-      .adv p {
-        margin-top: 0.8mm;
-        font-size: 7.8pt;
-        line-height: 1.35;
-        color: var(--muted);
-      }
-
-      .svc article {
-        margin-bottom: 3.4mm;
-      }
-
-      .svc h3 {
-        font-size: 13pt;
-        color: var(--ink);
-      }
-
-      .svc p {
-        margin-top: 0.8mm;
-        font-size: 8pt;
-        line-height: 1.35;
-        color: var(--muted);
-      }
-
-      .visit .step {
-        margin-bottom: 5mm;
-      }
-
-      .visit .n {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 20pt;
-        color: var(--gold);
-      }
-
-      .visit h3 {
+      .story h3 {
         font-size: 13.5pt;
-        margin: 0.8mm 0 1.2mm;
+        line-height: 1.15;
       }
 
-      .visit p {
-        font-size: 8.4pt;
-        line-height: 1.4;
-        color: var(--muted);
+      .story article p {
+        margin-top: 1.2mm;
+        font-size: 8.2pt;
       }
 
-      .visit .cta {
+      .act .cta-box {
         margin-top: auto;
         background: var(--espresso);
         color: var(--gold-soft);
-        border-radius: 2.4mm;
-        padding: 4mm;
+        padding: 5mm 4.5mm;
       }
 
-      .visit .cta strong {
-        display: block;
+      .act .cta-box .phone {
         font-family: "Cormorant Garamond", serif;
-        font-size: 13pt;
-        font-weight: 500;
+        font-size: 15pt;
         color: var(--gold);
       }
 
-      .visit .cta p {
-        margin-top: 1mm;
-        color: rgb(232 215 184 / 78%);
+      .act .cta-box p {
+        margin-top: 1.4mm;
         font-size: 8pt;
+        color: rgb(232 215 184 / 78%);
       }
 
-      .bldg {
-        height: 28mm;
-        border-radius: 2mm;
-        margin: 4mm 0 3mm;
-        overflow: hidden;
-      }
-
-      .bldg img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 40%;
+      .why .pic {
+        height: 48mm;
+        margin: 5mm -8.5mm 0;
       }
     </style>
   </head>
   <body>
-    <!-- Outside: back | flap | front  (how it is printed on one side) -->
     <section class="sheet a4-land ink">
       <div class="fold a"></div>
       <div class="fold b"></div>
 
       <div class="panel panel-1 back">
-        <p class="kicker">Контакты</p>
-        <h2>БЦ «Монарх»,<br />29 этаж</h2>
-        <div class="bldg">
-          <img src="/bc-monarch.png" alt="БЦ Монарх" />
+        <p class="eyebrow">Запись</p>
+        <h2>Позвоните —<br />потом приезжайте</h2>
+        <div class="pic">
+          <img class="bleed-img" src="./img/print-city-dusk.png" alt="" />
         </div>
+        <div class="phone">+7 (495) 690-96-00</div>
         <p class="addr">
-          г. Москва, Ленинградский проспект,<br />
-          дом 31А, строение 1, офис 9<br />
-          м. Динамо / м. Беговая
+          БЦ «Монарх», Ленинградский пр-т, 31А<br />
+          29 этаж, офис 9 · м. Динамо<br />
+          Пн–Пт 10:00–18:00 без перерыва
         </p>
-        <div class="phone">+7 (495) 690-96-00</div>
-        <p style="font-size: 8.5pt; color: rgb(232 215 184 / 75%)">
-          +7 (903) 969-40-04 · 6909600@bk.ru
-        </p>
-        <table class="hours-table">
-          <tr><td>Понедельник — пятница</td><td>10:00–18:00</td></tr>
-          <tr><td>Суббота, воскресенье</td><td>выходной</td></tr>
-        </table>
         <div class="qr-row">
-          <div class="qr">
-            <img src="./qr-site-gold.svg" alt="QR" />
-          </div>
-          <p>Сайт и онлайн-запись<br />davydova-notarius.ru</p>
+          <div class="qr"><img src="./qr-site-gold.svg" alt="" /></div>
+          <p>Сайт для записи<br />davydova-notarius.ru</p>
         </div>
       </div>
 
-      <div class="panel panel-2 flap">
-        <p class="kicker">Перед визитом</p>
-        <h2>Позвоните —<br />подскажем документы</h2>
-        <p class="lead" style="color: rgb(232 215 184 / 80%)">
-          Не нужно приезжать «на всякий случай». Назовите действие: доверенность,
-          сделка, наследство или корпоративный акт.
+      <div class="panel panel-2 flap paper" style="color: var(--ink)">
+        <p class="eyebrow">Если ехать без звонка</p>
+        <h2>Чаще всего не хватает одной бумаги</h2>
+        <p>
+          Мы не записываем «на всякий случай». Назовите действие — получите
+          короткий список. Так визит занимает час, а не полдня.
         </p>
-        <div class="box">
-          <h3>Срочный вопрос</h3>
-          <p>Скажите об этом при записи. Если закон позволяет — решим в день обращения.</p>
+        <div class="chip">
+          <strong>Срочно?</strong>
+          <span>Скажите сразу. Если закон позволяет — примем в тот же день.</span>
         </div>
-        <div class="box">
-          <h3>Парковка</h3>
-          <p>Комплекс у метро Динамо, удобно от Беговой. Офис на 29 этаже, офис 9.</p>
-        </div>
-        <div class="box">
-          <h3>Реестр ФНП</h3>
-          <p>Действующий нотариус города Москвы, реестровый номер 77/833-н/77.</p>
+        <div class="chip">
+          <strong>С компанией или семьёй</strong>
+          <span>Один маршрут: что везти, кто должен прийти, сколько займёт.</span>
         </div>
       </div>
 
-      <div class="panel panel-3 cover">
-        <p class="kicker">Нотариус города Москвы</p>
-        <div class="photo">
-          <img src="/notary-office.jpg" alt="Кабинет нотариуса" />
+      <div class="panel panel-3 cover ink">
+        <div class="pic">
+          <img class="bleed-img" src="./img/print-pen-paper.png" alt="" />
         </div>
-        <h1 class="name">
-          <span class="last">Давыдова</span>
-          <span class="first">Евгения Петровна</span>
-        </h1>
-        <p class="lead">
-          Спокойная сделка начинается с точного документа. Запишитесь заранее и
-          приезжайте без очереди.
-        </p>
-        <div class="phone">+7 (495) 690-96-00</div>
-        <p class="fine">
-          Сделки · Доверенности · Наследство · ООО<br />
-          davydova-notarius.ru
-        </p>
+        <div class="veil"></div>
+        <div class="pad">
+          <p class="eyebrow">Нотариус у метро Динамо</p>
+          <h1>Приезжайте уже со списком документов</h1>
+          <div class="phone">+7 (495) 690-96-00</div>
+          <p class="fine">Давыдова Евгения Петровна · БЦ «Монарх»</p>
+        </div>
       </div>
     </section>
 
-    <!-- Inside: about | services | visit -->
     <section class="sheet a4-land paper">
       <div class="fold a"></div>
       <div class="fold b"></div>
 
-      <div class="panel panel-1 about">
-        <p class="kicker muted">О нотариусе</p>
-        <h2>Точный документ,<br />ясный визит</h2>
-        <p class="quote">Мы не продаём «пакеты» и не обещаем невозможного.</p>
+      <div class="panel panel-1 why">
+        <p class="eyebrow">Зачем к нам</p>
+        <h2>Документ должен сработать с первого раза</h2>
         <p>
-          Евгения Петровна Давыдова — действующий нотариус города Москвы. В офисе
-          на Ленинградском проспекте удостоверяют сделки, доверенности, семейные
-          соглашения, завещания и наследственные дела.
+          Банк, Росреестр или налоговая не обязаны «войти в положение». Мы
+          формулируем так, чтобы акт приняли — и объясняем, что будет после
+          подписи.
         </p>
-        <div class="adv">
-          <article>
-            <h3>В центре деловой Москвы</h3>
-            <p>5 минут от метро Динамо, удобно от Беговой.</p>
-          </article>
-          <article>
-            <h3>Приём без перерыва</h3>
-            <p>Будни с 10:00 до 18:00. Можно сразу позвонить.</p>
-          </article>
-          <article>
-            <h3>Для людей и компаний</h3>
-            <p>Понятный маршрут, без лишних визитов.</p>
-          </article>
+        <div class="pic">
+          <img class="bleed-img" src="./img/print-two-cups.png" alt="" />
         </div>
       </div>
 
-      <div class="panel panel-2 svc">
-        <p class="kicker muted">Услуги</p>
-        <h2>Всё, что удостоверяют в конторе</h2>
+      <div class="panel panel-2 story">
+        <p class="eyebrow">Три случая</p>
+        <h2>Когда стоит записаться сегодня</h2>
         <article>
-          <h3>Доверенности</h3>
-          <p>Автомобиль, суд, генеральная, сбор документов.</p>
+          <h3>Нужно уехать или продать</h3>
+          <p>Доверенность или согласие супруга. Сначала звонок — потом визит.</p>
         </article>
         <article>
-          <h3>Недвижимость</h3>
-          <p>Отчуждение, ипотека, рента и пожизненное содержание.</p>
-        </article>
-        <article>
-          <h3>Юридическим лицам</h3>
-          <p>Доли ООО, залог долей, подписи для ФНС, решения органов.</p>
-        </article>
-        <article>
-          <h3>Семья и согласия</h3>
-          <p>Брачный договор, раздел, алименты, выезд ребёнка.</p>
+          <h3>Квартира или доля в ООО</h3>
+          <p>Сделку ставим на конкретный час. Без живой очереди в коридоре.</p>
         </article>
         <article>
           <h3>Наследство</h3>
-          <p>Завещание, открытие наследства, свидетельства о праве.</p>
-        </article>
-        <article>
-          <h3>Опционы и прочее</h3>
-          <p>Безотзывная оферта, копии, депозит, обеспечение доказательств.</p>
+          <p>Не тащите все папки сразу. Скажем, с чего начать именно вам.</p>
         </article>
       </div>
 
-      <div class="panel panel-3 visit" style="display:flex;flex-direction:column;height:100%">
-        <p class="kicker muted">Как попасть</p>
-        <h2>Три шага — и документ на руках</h2>
-        <div class="step">
-          <div class="n">01</div>
-          <h3>Позвоните или оставьте заявку</h3>
-          <p>Назовите действие. Подскажем, какие бумаги взять с собой.</p>
-        </div>
-        <div class="step">
-          <div class="n">02</div>
-          <h3>Приезжайте к назначенному времени</h3>
-          <p>Ленинградский пр-т, 31А, стр. 1, БЦ «Монарх», 29 этаж, офис 9.</p>
-        </div>
-        <div class="step">
-          <div class="n">03</div>
-          <h3>Получите готовый документ</h3>
-          <p>Удостоверение, разъяснение последствий и выдача на руки.</p>
-        </div>
-        <div class="cta">
-          <strong>+7 (495) 690-96-00</strong>
-          <p>Запись по телефону и на davydova-notarius.ru</p>
+      <div class="panel panel-3 act">
+        <p class="eyebrow">Как попасть</p>
+        <h2>Один звонок держит весь визит</h2>
+        <p>
+          Называете действие. Мы говорим, кто должен прийти и с чем. Вы
+          приезжаете к часу — на 29 этаж БЦ «Монарх».
+        </p>
+        <p>
+          Парковка у комплекса, метро Динамо в пяти минутах.
+        </p>
+        <div class="cta-box">
+          <div class="phone">+7 (495) 690-96-00</div>
+          <p>Пн–Пт 10:00–18:00 · davydova-notarius.ru</p>
         </div>
       </div>
     </section>

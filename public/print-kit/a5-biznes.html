@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Листовка A5 — бизнес</title>
+    <title>Листовка A5 — доли ООО</title>
     <link rel="stylesheet" href="./styles.css" />
     <style>
       @page {
@@ -10,217 +10,173 @@
         margin: 0;
       }
 
-      .front .pad {
-        padding: 13mm 12mm 11mm;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
-
-      .split {
-        display: grid;
-        grid-template-columns: 1fr 46mm;
-        gap: 5mm;
-        margin: 8mm 0 6mm;
-        min-height: 78mm;
-      }
-
-      .split .photo {
-        border-radius: 3mm;
+      .hero {
         height: 78mm;
       }
 
-      .facts {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      .hero img {
+        object-position: 50% 40%;
       }
 
-      .facts p {
-        font-size: 8.2pt;
-        line-height: 1.35;
-        color: rgb(232 215 184 / 75%);
-        border-top: 0.25mm solid rgb(196 165 116 / 35%);
-        padding-top: 2.4mm;
+      .body {
+        padding: 8mm 11mm 0;
       }
 
-      .facts p strong {
-        display: block;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 12pt;
-        font-weight: 500;
-        color: var(--gold);
-        margin-bottom: 0.8mm;
-      }
-
-      .front .name .last {
-        font-size: 28pt;
-      }
-      .front .name .first {
-        font-size: 24pt;
-      }
-
-      .front .lead {
-        color: rgb(232 215 184 / 82%);
-        max-width: 118mm;
-      }
-
-      .front .phone {
-        margin-top: auto;
-        padding-top: 6mm;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 18pt;
-        color: var(--gold);
-      }
-
-      .front .site {
-        margin-top: 1.5mm;
-        font-size: 9pt;
-        letter-spacing: 0.08em;
+      .eyebrow {
+        font-size: 7.6pt;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: rgb(232 215 184 / 65%);
+        color: var(--gold);
       }
 
-      .back .pad {
-        padding: 13mm 12mm 11mm;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+      h1 {
+        margin-top: 2mm;
+        font-size: 24pt;
+        line-height: 1;
       }
 
-      .back h2 {
-        font-size: 21pt;
-        line-height: 1.05;
-        margin: 2mm 0 4.5mm;
-      }
-
-      .row {
-        border-bottom: 0.25mm solid var(--line);
-        padding: 3.1mm 0;
-      }
-
-      .row h3 {
-        font-size: 13.5pt;
-      }
-
-      .row p {
-        margin-top: 1mm;
-        font-size: 8.3pt;
+      .promise {
+        margin-top: 3.6mm;
+        font-size: 10pt;
         line-height: 1.4;
         color: var(--muted);
       }
 
-      .cta {
+      .front .cta {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 6mm 11mm 7mm;
+      }
+
+      .front .phone {
+        font-size: 20pt;
+      }
+
+      .front .cta p {
+        margin-top: 1.6mm;
+        font-size: 8.2pt;
+        color: rgb(232 215 184 / 78%);
+      }
+
+      .back {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .band {
+        height: 42mm;
+      }
+
+      .band img {
+        object-position: 50% 60%;
+      }
+
+      .intro {
+        padding: 8mm 11mm 0;
+      }
+
+      .back h2 {
+        font-size: 20pt;
+        line-height: 1.05;
+        margin-top: 2mm;
+      }
+
+      .ask {
+        padding: 5mm 11mm 0;
+      }
+
+      .ask p {
+        font-size: 10pt;
+        line-height: 1.4;
+        color: var(--muted);
+      }
+
+      .ask ul {
+        margin-top: 4mm;
+        list-style: none;
+      }
+
+      .ask li {
+        padding: 2.6mm 0;
+        border-top: 0.25mm solid var(--line);
+        font-size: 10.5pt;
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      .back .cta {
         margin-top: auto;
+        padding: 5.5mm 11mm 6.5mm;
         display: grid;
-        grid-template-columns: 1fr 22mm;
+        grid-template-columns: 1fr 20mm;
         gap: 4mm;
         align-items: center;
-        background: var(--espresso);
-        color: var(--gold-soft);
-        border-radius: 2.6mm;
-        padding: 4.5mm;
       }
 
-      .cta strong {
-        display: block;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 14pt;
-        font-weight: 500;
-        color: var(--gold);
+      .back .phone {
+        font-size: 16pt;
       }
 
-      .cta p {
+      .back .cta p {
         margin-top: 1.2mm;
-        font-size: 8pt;
-        line-height: 1.4;
+        font-size: 7.8pt;
+        line-height: 1.35;
         color: rgb(232 215 184 / 78%);
+      }
+
+      .qr {
+        width: 20mm;
+        height: 20mm;
       }
     </style>
   </head>
   <body>
-    <section class="sheet a5 ink front">
-      <div class="frame"></div>
-      <div class="inner pad">
-        <p class="kicker">Нотариус города Москвы · реестр 77/833-н/77</p>
-        <div class="split">
-          <div>
-            <h1 class="name">
-              <span class="last">Давыдова</span>
-              <span class="first">Евгения Петровна</span>
-            </h1>
-            <p class="lead" style="margin-top: 4mm">
-              Корпоративные действия без срыва сроков регистрации. Доли ООО,
-              опционы, подписи для налоговой — в деловом центре у метро Динамо.
-            </p>
-          </div>
-          <div class="photo">
-            <img src="/notary-office.jpg" alt="Кабинет нотариуса" style="object-position: 72% 22%" />
-          </div>
-        </div>
-        <div class="facts">
-          <p>
-            <strong>Доли в ООО</strong>
-            Отчуждение и залог долей в уставном капитале.
-          </p>
-          <p style="margin-top: 3mm">
-            <strong>Решения и подписи</strong>
-            Формы для ФНС, карточка образцов, решения органов юрлица.
-          </p>
-          <p style="margin-top: 3mm">
-            <strong>Опционы</strong>
-            Безотзывная оферта и акцепт по правилам ГК РФ.
-          </p>
-        </div>
+    <section class="sheet a5 paper front">
+      <div class="hero">
+        <img class="bleed-img" src="./img/print-leather-desk.png" alt="" />
+      </div>
+      <div class="body">
+        <p class="eyebrow">Для собственников и юристов</p>
+        <h1>Доли ООО.<br />В срок. Без второго визита.</h1>
+        <p class="promise">
+          Нотариальную часть закроем в назначенный час. Комплект документов
+          согласуем по телефону — до того, как вы соберёте папку.
+        </p>
+      </div>
+      <div class="cta">
         <div class="phone">+7 (495) 690-96-00</div>
-        <div class="site">davydova-notarius.ru · запись по телефону</div>
+        <p>БЦ «Монарх» · м. Динамо · запись обязательна</p>
       </div>
     </section>
 
     <section class="sheet a5 paper back">
-      <div class="frame soft"></div>
-      <div class="inner pad">
-        <p class="kicker muted">Юридическим лицам</p>
-        <h2>Закроем нотариальную часть сделки</h2>
-        <div class="row">
-          <h3>Сделки с долями</h3>
-          <p>
-            Удостоверение договора об отчуждении и залога долей в уставном
-            капитале ООО. Подскажем комплект документов до визита.
-          </p>
+      <div class="band">
+        <img class="bleed-img" src="./img/print-city-dusk.png" alt="" />
+      </div>
+      <div class="intro">
+        <p class="eyebrow">Позвоните до собрания папки</p>
+        <h2>Иначе легко приехать без одной справки</h2>
+      </div>
+      <div class="ask">
+        <p>
+          Назовите действие — скажем, что реально нужно в этот визит, а что можно
+          не везти.
+        </p>
+        <ul>
+          <li>Отчуждение или залог доли</li>
+          <li>Подписи на формах для ФНС</li>
+          <li>Решение органа юрлица или опцион</li>
+        </ul>
+      </div>
+      <div class="cta">
+        <div>
+          <div class="phone">+7 (495) 690-96-00</div>
+          <p>Давыдова Е. П. · 29 этаж, офис 9<br />Пн–Пт 10:00–18:00</p>
         </div>
-        <div class="row">
-          <h3>Регистрационные действия</h3>
-          <p>
-            Свидетельствование подписи на формах для налогового органа и
-            представление документов на государственную регистрацию.
-          </p>
-        </div>
-        <div class="row">
-          <h3>Корпоративные решения</h3>
-          <p>
-            Удостоверение решений органов юридических лиц, карточка с образцами
-            подписей и оттиска печати.
-          </p>
-        </div>
-        <div class="row">
-          <h3>Недвижимость и залог</h3>
-          <p>
-            Договоры отчуждения и ипотеки, если объект и стороны готовы к
-            удостоверению в день записи.
-          </p>
-        </div>
-        <div class="cta">
-          <div>
-            <strong>БЦ «Монарх», 29 этаж</strong>
-            <p>
-              Ленинградский пр-т, 31А, стр. 1 · м. Динамо<br />
-              Пн–Пт 10:00–18:00 · +7 (495) 690-96-00
-            </p>
-          </div>
-          <div class="qr">
-            <img src="./qr-site-gold.svg" alt="QR на сайт" />
-          </div>
+        <div class="qr">
+          <img src="./qr-site-gold.svg" alt="" />
         </div>
       </div>
     </section>

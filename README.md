@@ -32,10 +32,10 @@ npm start
 
 Рекламные листовки и буклет лежат в `public/print/` и на странице [`/pechat`](http://localhost:43123/pechat):
 
-- `listovka-a5-semya.pdf` — A5, 2 стороны, для семей
-- `listovka-a5-biznes.pdf` — A5, 2 стороны, для компаний
-- `listovka-a4.pdf` — афиша A4
-- `buklet-a4.pdf` — буклет-раскладушка A4
+- `listovka-a5-semya.pdf` — A5, запись без очереди
+- `listovka-a5-biznes.pdf` — A5, доли ООО в срок
+- `listovka-a4.pdf` — афиша «запишитесь»
+- `buklet-a4.pdf` — буклет-раскладушка
 
 Исходные вёрстки: `public/print-kit/`. Пересборка PDF: `node print/render.mjs` при запущенном `npm run dev`.
 
