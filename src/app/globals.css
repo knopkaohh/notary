@@ -246,3 +246,15 @@
 .loader-pulse {
   animation: loader-pulse 1.6s ease-in-out infinite;
 }
+
+.loader-screen {
+  animation: loader-dismiss 0.6s ease 2.2s forwards;
+}
+
+@keyframes loader-dismiss {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

@@ -14,12 +14,9 @@ export function LoadingScreen() {
 
     const start = window.setTimeout(() => setLeaving(true), hold);
     const done = window.setTimeout(() => setVisible(false), hold + hide);
-    document.body.style.overflow = "hidden";
-
     return () => {
       window.clearTimeout(start);
       window.clearTimeout(done);
-      document.body.style.overflow = "";
     };
   }, []);
 
@@ -27,7 +24,7 @@ export function LoadingScreen() {
 
   return (
     <div
-      className={`fixed inset-0 z-[80] flex items-center justify-center bg-espresso text-gold-soft transition-opacity duration-700 ${
+      className={`loader-screen fixed inset-0 z-[80] flex items-center justify-center bg-espresso text-gold-soft transition-opacity duration-700 ${
         leaving ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
       aria-hidden={!visible}
