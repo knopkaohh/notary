@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Листовка A5 — семьи</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      @page {
+        size: 148mm 210mm;
+        margin: 0;
+      }
+
+      .front .pad {
+        padding: 14mm 13mm 12mm;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .front .photo {
+        height: 62mm;
+        border-radius: 3mm;
+        margin: 7mm 0 6mm;
+      }
+
+      .front .name .last {
+        font-size: 30pt;
+      }
+      .front .name .first {
+        font-size: 27pt;
+      }
+
+      .front .lead {
+        margin-top: 5mm;
+        max-width: 112mm;
+        color: rgb(232 215 184 / 82%);
+      }
+
+      .front .meta {
+        margin-top: auto;
+        display: grid;
+        gap: 2.2mm;
+        font-size: 9pt;
+        color: rgb(232 215 184 / 72%);
+      }
+
+      .front .phone {
+        margin-top: 5mm;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18pt;
+        color: var(--gold);
+      }
+
+      .back .pad {
+        padding: 13mm 12mm 11mm;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .back h2 {
+        font-size: 22pt;
+        line-height: 1.05;
+        margin: 2mm 0 4mm;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3.2mm;
+      }
+
+      .card {
+        background: var(--card);
+        border: 0.25mm solid var(--line);
+        border-radius: 2.4mm;
+        padding: 3.2mm 3.4mm 3mm;
+      }
+
+      .card h3 {
+        font-size: 12.5pt;
+        margin-bottom: 1mm;
+      }
+
+      .card p {
+        font-size: 8pt;
+        line-height: 1.35;
+        color: var(--muted);
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2.5mm;
+        margin-top: 5mm;
+      }
+
+      .steps article {
+        border-top: 0.3mm solid var(--gold);
+        padding-top: 2.4mm;
+      }
+
+      .steps .n {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16pt;
+        color: var(--gold);
+      }
+
+      .steps h3 {
+        font-size: 10.5pt;
+        line-height: 1.2;
+        margin: 1mm 0;
+      }
+
+      .steps p {
+        font-size: 7.4pt;
+        line-height: 1.35;
+        color: var(--muted);
+      }
+
+      .foot {
+        margin-top: auto;
+        background: var(--espresso);
+        color: var(--gold-soft);
+        border-radius: 2.6mm;
+        padding: 4.2mm 4.5mm;
+        display: grid;
+        grid-template-columns: 1fr 22mm;
+        gap: 3mm;
+        align-items: center;
+      }
+
+      .foot p {
+        font-size: 8pt;
+        line-height: 1.4;
+        color: rgb(232 215 184 / 80%);
+      }
+
+      .foot strong {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 13pt;
+        font-weight: 500;
+        color: var(--gold);
+        margin-bottom: 1mm;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="sheet a5 ink front">
+      <div class="frame"></div>
+      <div class="inner pad">
+        <p class="kicker">Нотариус города Москвы · 77/833-н/77</p>
+        <div class="photo">
+          <img src="/notary-office.jpg" alt="Кабинет нотариуса" />
+        </div>
+        <h1 class="name">
+          <span class="last">Давыдова</span>
+          <span class="first">Евгения Петровна</span>
+        </h1>
+        <p class="lead">
+          Доверенность, согласие, наследство или семейное соглашение — в БЦ
+          «Монарх» у метро Динамо. Запишитесь заранее и приезжайте без очереди.
+        </p>
+        <p class="phone">+7 (495) 690-96-00</p>
+        <div class="meta">
+          <div>м. Динамо / м. Беговая · 29 этаж, офис 9</div>
+          <div>Пн–Пт с 10:00 до 18:00 без перерыва</div>
+          <div>davydova-notarius.ru</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet a5 paper back">
+      <div class="frame soft"></div>
+      <div class="inner pad">
+        <p class="kicker muted">Для семей</p>
+        <h2>Что оформляем за один визит</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Доверенности</h3>
+            <p>На автомобиль, судебные, генеральные — примут банки и госорганы.</p>
+          </article>
+          <article class="card">
+            <h3>Согласия</h3>
+            <p>На выезд ребёнка, на сделку супруга, на регистрацию.</p>
+          </article>
+          <article class="card">
+            <h3>Семья</h3>
+            <p>Брачный договор, раздел имущества, алименты, воспитание ребёнка.</p>
+          </article>
+          <article class="card">
+            <h3>Наследство</h3>
+            <p>Завещание, открытие наследства, свидетельства о праве.</p>
+          </article>
+        </div>
+        <div class="steps">
+          <article>
+            <div class="n">01</div>
+            <h3>Позвоните</h3>
+            <p>Назовите действие — подскажем список документов.</p>
+          </article>
+          <article>
+            <div class="n">02</div>
+            <h3>Приезжайте</h3>
+            <p>БЦ «Монарх», Ленинградский пр-т, 31А, стр. 1.</p>
+          </article>
+          <article>
+            <div class="n">03</div>
+            <h3>Получите акт</h3>
+            <p>Удостоверение и документ на руки в день визита.</p>
+          </article>
+        </div>
+        <div class="foot">
+          <div>
+            <strong>+7 (495) 690-96-00</strong>
+            <p>
+              г. Москва, Ленинградский проспект, 31А, стр. 1,<br />
+              БЦ «Монарх», 29 этаж, офис 9<br />
+              6909600@bk.ru
+            </p>
+          </div>
+          <div class="qr">
+            <img src="./qr-site-gold.svg" alt="QR на сайт" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

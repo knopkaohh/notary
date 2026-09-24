@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Буклет A4 — раскладушка</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      @page {
+        size: A4 landscape;
+        margin: 0;
+      }
+
+      .panel {
+        padding: 11mm 9mm 10mm;
+      }
+
+      .panel h2 {
+        font-size: 20pt;
+        line-height: 1.08;
+        margin: 2mm 0 4mm;
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .cover .photo {
+        height: 68mm;
+        border-radius: 3mm;
+        margin: 7mm 0 6mm;
+      }
+
+      .cover .name .last {
+        font-size: 28pt;
+      }
+      .cover .name .first {
+        font-size: 24pt;
+      }
+
+      .cover .lead {
+        margin-top: 4mm;
+        color: rgb(232 215 184 / 82%);
+        font-size: 10pt;
+      }
+
+      .cover .phone {
+        margin-top: auto;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16pt;
+        color: var(--gold);
+      }
+
+      .cover .fine {
+        margin-top: 2mm;
+        font-size: 8pt;
+        color: rgb(232 215 184 / 68%);
+        line-height: 1.4;
+      }
+
+      .back .addr {
+        margin-top: 5mm;
+        font-size: 9.2pt;
+        line-height: 1.5;
+      }
+
+      .back .phone {
+        margin: 6mm 0 3mm;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18pt;
+        color: var(--gold);
+      }
+
+      .hours-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 5mm;
+        font-size: 8.4pt;
+      }
+
+      .hours-table td {
+        padding: 1.7mm 0;
+        border-bottom: 0.2mm solid rgb(196 165 116 / 28%);
+      }
+
+      .hours-table td:last-child {
+        text-align: right;
+      }
+
+      .back .qr-row {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        gap: 3.5mm;
+      }
+
+      .back .qr-row p {
+        font-size: 8pt;
+        line-height: 1.35;
+        color: rgb(232 215 184 / 75%);
+      }
+
+      .flap .box {
+        border: 0.3mm solid rgb(196 165 116 / 40%);
+        border-radius: 2.6mm;
+        padding: 4mm;
+        margin-top: 4mm;
+      }
+
+      .flap .box h3 {
+        font-size: 13pt;
+        color: var(--gold);
+        margin-bottom: 1.6mm;
+      }
+
+      .flap .box p {
+        font-size: 8.6pt;
+        line-height: 1.4;
+        color: rgb(232 215 184 / 78%);
+      }
+
+      .about p {
+        font-size: 9pt;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .about .quote {
+        margin: 4mm 0 5mm;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14pt;
+        line-height: 1.25;
+        color: var(--ink);
+      }
+
+      .adv {
+        margin-top: 2mm;
+      }
+
+      .adv article {
+        padding: 2.6mm 0;
+        border-top: 0.2mm solid var(--line);
+      }
+
+      .adv h3 {
+        font-size: 12pt;
+      }
+
+      .adv p {
+        margin-top: 0.8mm;
+        font-size: 7.8pt;
+        line-height: 1.35;
+        color: var(--muted);
+      }
+
+      .svc article {
+        margin-bottom: 3.4mm;
+      }
+
+      .svc h3 {
+        font-size: 13pt;
+        color: var(--ink);
+      }
+
+      .svc p {
+        margin-top: 0.8mm;
+        font-size: 8pt;
+        line-height: 1.35;
+        color: var(--muted);
+      }
+
+      .visit .step {
+        margin-bottom: 5mm;
+      }
+
+      .visit .n {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20pt;
+        color: var(--gold);
+      }
+
+      .visit h3 {
+        font-size: 13.5pt;
+        margin: 0.8mm 0 1.2mm;
+      }
+
+      .visit p {
+        font-size: 8.4pt;
+        line-height: 1.4;
+        color: var(--muted);
+      }
+
+      .visit .cta {
+        margin-top: auto;
+        background: var(--espresso);
+        color: var(--gold-soft);
+        border-radius: 2.4mm;
+        padding: 4mm;
+      }
+
+      .visit .cta strong {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 13pt;
+        font-weight: 500;
+        color: var(--gold);
+      }
+
+      .visit .cta p {
+        margin-top: 1mm;
+        color: rgb(232 215 184 / 78%);
+        font-size: 8pt;
+      }
+
+      .bldg {
+        height: 28mm;
+        border-radius: 2mm;
+        margin: 4mm 0 3mm;
+        overflow: hidden;
+      }
+
+      .bldg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Outside: back | flap | front  (how it is printed on one side) -->
+    <section class="sheet a4-land ink">
+      <div class="fold a"></div>
+      <div class="fold b"></div>
+
+      <div class="panel panel-1 back">
+        <p class="kicker">Контакты</p>
+        <h2>БЦ «Монарх»,<br />29 этаж</h2>
+        <div class="bldg">
+          <img src="/bc-monarch.png" alt="БЦ Монарх" />
+        </div>
+        <p class="addr">
+          г. Москва, Ленинградский проспект,<br />
+          дом 31А, строение 1, офис 9<br />
+          м. Динамо / м. Беговая
+        </p>
+        <div class="phone">+7 (495) 690-96-00</div>
+        <p style="font-size: 8.5pt; color: rgb(232 215 184 / 75%)">
+          +7 (903) 969-40-04 · 6909600@bk.ru
+        </p>
+        <table class="hours-table">
+          <tr><td>Понедельник — пятница</td><td>10:00–18:00</td></tr>
+          <tr><td>Суббота, воскресенье</td><td>выходной</td></tr>
+        </table>
+        <div class="qr-row">
+          <div class="qr">
+            <img src="./qr-site-gold.svg" alt="QR" />
+          </div>
+          <p>Сайт и онлайн-запись<br />davydova-notarius.ru</p>
+        </div>
+      </div>
+
+      <div class="panel panel-2 flap">
+        <p class="kicker">Перед визитом</p>
+        <h2>Позвоните —<br />подскажем документы</h2>
+        <p class="lead" style="color: rgb(232 215 184 / 80%)">
+          Не нужно приезжать «на всякий случай». Назовите действие: доверенность,
+          сделка, наследство или корпоративный акт.
+        </p>
+        <div class="box">
+          <h3>Срочный вопрос</h3>
+          <p>Скажите об этом при записи. Если закон позволяет — решим в день обращения.</p>
+        </div>
+        <div class="box">
+          <h3>Парковка</h3>
+          <p>Комплекс у метро Динамо, удобно от Беговой. Офис на 29 этаже, офис 9.</p>
+        </div>
+        <div class="box">
+          <h3>Реестр ФНП</h3>
+          <p>Действующий нотариус города Москвы, реестровый номер 77/833-н/77.</p>
+        </div>
+      </div>
+
+      <div class="panel panel-3 cover">
+        <p class="kicker">Нотариус города Москвы</p>
+        <div class="photo">
+          <img src="/notary-office.jpg" alt="Кабинет нотариуса" />
+        </div>
+        <h1 class="name">
+          <span class="last">Давыдова</span>
+          <span class="first">Евгения Петровна</span>
+        </h1>
+        <p class="lead">
+          Спокойная сделка начинается с точного документа. Запишитесь заранее и
+          приезжайте без очереди.
+        </p>
+        <div class="phone">+7 (495) 690-96-00</div>
+        <p class="fine">
+          Сделки · Доверенности · Наследство · ООО<br />
+          davydova-notarius.ru
+        </p>
+      </div>
+    </section>
+
+    <!-- Inside: about | services | visit -->
+    <section class="sheet a4-land paper">
+      <div class="fold a"></div>
+      <div class="fold b"></div>
+
+      <div class="panel panel-1 about">
+        <p class="kicker muted">О нотариусе</p>
+        <h2>Точный документ,<br />ясный визит</h2>
+        <p class="quote">Мы не продаём «пакеты» и не обещаем невозможного.</p>
+        <p>
+          Евгения Петровна Давыдова — действующий нотариус города Москвы. В офисе
+          на Ленинградском проспекте удостоверяют сделки, доверенности, семейные
+          соглашения, завещания и наследственные дела.
+        </p>
+        <div class="adv">
+          <article>
+            <h3>В центре деловой Москвы</h3>
+            <p>5 минут от метро Динамо, удобно от Беговой.</p>
+          </article>
+          <article>
+            <h3>Приём без перерыва</h3>
+            <p>Будни с 10:00 до 18:00. Можно сразу позвонить.</p>
+          </article>
+          <article>
+            <h3>Для людей и компаний</h3>
+            <p>Понятный маршрут, без лишних визитов.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel panel-2 svc">
+        <p class="kicker muted">Услуги</p>
+        <h2>Всё, что удостоверяют в конторе</h2>
+        <article>
+          <h3>Доверенности</h3>
+          <p>Автомобиль, суд, генеральная, сбор документов.</p>
+        </article>
+        <article>
+          <h3>Недвижимость</h3>
+          <p>Отчуждение, ипотека, рента и пожизненное содержание.</p>
+        </article>
+        <article>
+          <h3>Юридическим лицам</h3>
+          <p>Доли ООО, залог долей, подписи для ФНС, решения органов.</p>
+        </article>
+        <article>
+          <h3>Семья и согласия</h3>
+          <p>Брачный договор, раздел, алименты, выезд ребёнка.</p>
+        </article>
+        <article>
+          <h3>Наследство</h3>
+          <p>Завещание, открытие наследства, свидетельства о праве.</p>
+        </article>
+        <article>
+          <h3>Опционы и прочее</h3>
+          <p>Безотзывная оферта, копии, депозит, обеспечение доказательств.</p>
+        </article>
+      </div>
+
+      <div class="panel panel-3 visit" style="display:flex;flex-direction:column;height:100%">
+        <p class="kicker muted">Как попасть</p>
+        <h2>Три шага — и документ на руках</h2>
+        <div class="step">
+          <div class="n">01</div>
+          <h3>Позвоните или оставьте заявку</h3>
+          <p>Назовите действие. Подскажем, какие бумаги взять с собой.</p>
+        </div>
+        <div class="step">
+          <div class="n">02</div>
+          <h3>Приезжайте к назначенному времени</h3>
+          <p>Ленинградский пр-т, 31А, стр. 1, БЦ «Монарх», 29 этаж, офис 9.</p>
+        </div>
+        <div class="step">
+          <div class="n">03</div>
+          <h3>Получите готовый документ</h3>
+          <p>Удостоверение, разъяснение последствий и выдача на руки.</p>
+        </div>
+        <div class="cta">
+          <strong>+7 (495) 690-96-00</strong>
+          <p>Запись по телефону и на davydova-notarius.ru</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

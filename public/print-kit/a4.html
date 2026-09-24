@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Листовка A4</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      .pad {
+        padding: 16mm 16mm 14mm;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10mm;
+      }
+
+      .name .last {
+        font-size: 42pt;
+      }
+      .name .first {
+        font-size: 36pt;
+      }
+
+      .hero {
+        margin-top: 8mm;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 7mm;
+        align-items: stretch;
+        flex: 1;
+      }
+
+      .hero .photo {
+        min-height: 118mm;
+        border-radius: 3.5mm;
+      }
+
+      .hero-copy .lead {
+        font-size: 13pt;
+        color: rgb(232 215 184 / 84%);
+        max-width: 105mm;
+      }
+
+      .hero-copy .phone {
+        margin-top: 7mm;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 24pt;
+        color: var(--gold);
+      }
+
+      .hero-copy .meta {
+        margin-top: 3mm;
+        font-size: 10pt;
+        line-height: 1.45;
+        color: rgb(232 215 184 / 72%);
+      }
+
+      .services {
+        margin-top: 8mm;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4mm;
+      }
+
+      .services article {
+        border-top: 0.35mm solid rgb(196 165 116 / 55%);
+        padding-top: 3.2mm;
+      }
+
+      .services h3 {
+        font-size: 16pt;
+        color: var(--gold-soft);
+      }
+
+      .services p {
+        margin-top: 1.6mm;
+        font-size: 9pt;
+        line-height: 1.4;
+        color: rgb(232 215 184 / 72%);
+      }
+
+      .bottom {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 8mm;
+        padding-top: 8mm;
+      }
+
+      .bottom .hours {
+        font-size: 10pt;
+        color: rgb(232 215 184 / 75%);
+      }
+
+      .qr-wrap {
+        text-align: center;
+      }
+
+      .qr-wrap .qr {
+        width: 26mm;
+        height: 26mm;
+        margin: 0 auto 2mm;
+      }
+
+      .qr-wrap span {
+        font-size: 7.5pt;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="sheet a4 ink">
+      <div class="frame"></div>
+      <div class="inner pad">
+        <div class="top">
+          <p class="kicker">Нотариус города Москвы · реестр 77/833-н/77</p>
+          <div class="mono">ДЕП</div>
+        </div>
+        <div class="hero">
+          <div class="hero-copy">
+            <h1 class="name">
+              <span class="last">Давыдова</span>
+              <span class="first">Евгения Петровна</span>
+            </h1>
+            <p class="lead" style="margin-top: 6mm">
+              Сделки, доверенности, наследство и корпоративные действия — в БЦ
+              «Монарх» у метро Динамо. Запишитесь заранее и приезжайте без
+              очереди.
+            </p>
+            <div class="phone">+7 (495) 690-96-00</div>
+            <p class="meta">
+              Ленинградский проспект, 31А, стр. 1<br />
+              БЦ «Монарх», 29 этаж, офис 9<br />
+              davydova-notarius.ru
+            </p>
+          </div>
+          <div class="photo">
+            <img src="/notary-office.jpg" alt="Кабинет нотариуса" />
+          </div>
+        </div>
+        <div class="services">
+          <article>
+            <h3>Семьям</h3>
+            <p>Доверенности, согласия, брачные договоры, завещания и наследственные дела.</p>
+          </article>
+          <article>
+            <h3>Компаниям</h3>
+            <p>Доли ООО, решения органов, подписи для ФНС, опционы и залог.</p>
+          </article>
+          <article>
+            <h3>Сделки</h3>
+            <p>Недвижимость, ипотека, рента — с проверкой и ясными сроками визита.</p>
+          </article>
+        </div>
+        <div class="bottom">
+          <p class="hours">
+            Приём без перерыва · Пн–Пт 10:00–18:00<br />
+            м. Динамо / м. Беговая · парковка у комплекса
+          </p>
+          <div class="qr-wrap">
+            <div class="qr">
+              <img src="./qr-site-gold.svg" alt="QR на сайт" />
+            </div>
+            <span>Запись на сайте</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

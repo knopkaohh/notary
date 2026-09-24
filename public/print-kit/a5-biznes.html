@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Листовка A5 — бизнес</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      @page {
+        size: 148mm 210mm;
+        margin: 0;
+      }
+
+      .front .pad {
+        padding: 13mm 12mm 11mm;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 46mm;
+        gap: 5mm;
+        margin: 8mm 0 6mm;
+        min-height: 78mm;
+      }
+
+      .split .photo {
+        border-radius: 3mm;
+        height: 78mm;
+      }
+
+      .facts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .facts p {
+        font-size: 8.2pt;
+        line-height: 1.35;
+        color: rgb(232 215 184 / 75%);
+        border-top: 0.25mm solid rgb(196 165 116 / 35%);
+        padding-top: 2.4mm;
+      }
+
+      .facts p strong {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 12pt;
+        font-weight: 500;
+        color: var(--gold);
+        margin-bottom: 0.8mm;
+      }
+
+      .front .name .last {
+        font-size: 28pt;
+      }
+      .front .name .first {
+        font-size: 24pt;
+      }
+
+      .front .lead {
+        color: rgb(232 215 184 / 82%);
+        max-width: 118mm;
+      }
+
+      .front .phone {
+        margin-top: auto;
+        padding-top: 6mm;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18pt;
+        color: var(--gold);
+      }
+
+      .front .site {
+        margin-top: 1.5mm;
+        font-size: 9pt;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgb(232 215 184 / 65%);
+      }
+
+      .back .pad {
+        padding: 13mm 12mm 11mm;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .back h2 {
+        font-size: 21pt;
+        line-height: 1.05;
+        margin: 2mm 0 4.5mm;
+      }
+
+      .row {
+        border-bottom: 0.25mm solid var(--line);
+        padding: 3.1mm 0;
+      }
+
+      .row h3 {
+        font-size: 13.5pt;
+      }
+
+      .row p {
+        margin-top: 1mm;
+        font-size: 8.3pt;
+        line-height: 1.4;
+        color: var(--muted);
+      }
+
+      .cta {
+        margin-top: auto;
+        display: grid;
+        grid-template-columns: 1fr 22mm;
+        gap: 4mm;
+        align-items: center;
+        background: var(--espresso);
+        color: var(--gold-soft);
+        border-radius: 2.6mm;
+        padding: 4.5mm;
+      }
+
+      .cta strong {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14pt;
+        font-weight: 500;
+        color: var(--gold);
+      }
+
+      .cta p {
+        margin-top: 1.2mm;
+        font-size: 8pt;
+        line-height: 1.4;
+        color: rgb(232 215 184 / 78%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="sheet a5 ink front">
+      <div class="frame"></div>
+      <div class="inner pad">
+        <p class="kicker">Нотариус города Москвы · реестр 77/833-н/77</p>
+        <div class="split">
+          <div>
+            <h1 class="name">
+              <span class="last">Давыдова</span>
+              <span class="first">Евгения Петровна</span>
+            </h1>
+            <p class="lead" style="margin-top: 4mm">
+              Корпоративные действия без срыва сроков регистрации. Доли ООО,
+              опционы, подписи для налоговой — в деловом центре у метро Динамо.
+            </p>
+          </div>
+          <div class="photo">
+            <img src="/notary-office.jpg" alt="Кабинет нотариуса" style="object-position: 72% 22%" />
+          </div>
+        </div>
+        <div class="facts">
+          <p>
+            <strong>Доли в ООО</strong>
+            Отчуждение и залог долей в уставном капитале.
+          </p>
+          <p style="margin-top: 3mm">
+            <strong>Решения и подписи</strong>
+            Формы для ФНС, карточка образцов, решения органов юрлица.
+          </p>
+          <p style="margin-top: 3mm">
+            <strong>Опционы</strong>
+            Безотзывная оферта и акцепт по правилам ГК РФ.
+          </p>
+        </div>
+        <div class="phone">+7 (495) 690-96-00</div>
+        <div class="site">davydova-notarius.ru · запись по телефону</div>
+      </div>
+    </section>
+
+    <section class="sheet a5 paper back">
+      <div class="frame soft"></div>
+      <div class="inner pad">
+        <p class="kicker muted">Юридическим лицам</p>
+        <h2>Закроем нотариальную часть сделки</h2>
+        <div class="row">
+          <h3>Сделки с долями</h3>
+          <p>
+            Удостоверение договора об отчуждении и залога долей в уставном
+            капитале ООО. Подскажем комплект документов до визита.
+          </p>
+        </div>
+        <div class="row">
+          <h3>Регистрационные действия</h3>
+          <p>
+            Свидетельствование подписи на формах для налогового органа и
+            представление документов на государственную регистрацию.
+          </p>
+        </div>
+        <div class="row">
+          <h3>Корпоративные решения</h3>
+          <p>
+            Удостоверение решений органов юридических лиц, карточка с образцами
+            подписей и оттиска печати.
+          </p>
+        </div>
+        <div class="row">
+          <h3>Недвижимость и залог</h3>
+          <p>
+            Договоры отчуждения и ипотеки, если объект и стороны готовы к
+            удостоверению в день записи.
+          </p>
+        </div>
+        <div class="cta">
+          <div>
+            <strong>БЦ «Монарх», 29 этаж</strong>
+            <p>
+              Ленинградский пр-т, 31А, стр. 1 · м. Динамо<br />
+              Пн–Пт 10:00–18:00 · +7 (495) 690-96-00
+            </p>
+          </div>
+          <div class="qr">
+            <img src="./qr-site-gold.svg" alt="QR на сайт" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

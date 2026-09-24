@@ -41,6 +41,9 @@ export function Footer() {
           >
             Согласие на обработку персональных данных
           </Link>
+          <Link href="/pechat" className="block hover:text-gold">
+            Макеты листовок и буклета
+          </Link>
           <p className="pt-6 text-xs text-gold-soft/45">
             © {new Date().getFullYear()} Нотариус Давыдова. Все права защищены.
           </p>

@@ -28,6 +28,17 @@ npm run build
 npm start
 ```
 
+## Печатные макеты
+
+Рекламные листовки и буклет лежат в `public/print/` и на странице [`/pechat`](http://localhost:43123/pechat):
+
+- `listovka-a5-semya.pdf` — A5, 2 стороны, для семей
+- `listovka-a5-biznes.pdf` — A5, 2 стороны, для компаний
+- `listovka-a4.pdf` — афиша A4
+- `buklet-a4.pdf` — буклет-раскладушка A4
+
+Исходные вёрстки: `public/print-kit/`. Пересборка PDF: `node print/render.mjs` при запущенном `npm run dev`.
+
 ## Заявки с формы
 
 Форма «Записаться» отправляет данные на `/api/appointment`. В этой версии заявка проверяется на сервере и логируется. Чтобы письма уходили на `6909600@bk.ru`, подключите почтовый сервис (Resend, SMTP) в обработчик API.
