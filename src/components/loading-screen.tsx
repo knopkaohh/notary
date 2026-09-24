@@ -67,10 +67,24 @@ export function LoadingScreen() {
               opacity="0.7"
             />
           </svg>
-          <div className="loader-mark absolute inset-0 grid place-items-center">
-            <div className="font-heading text-[42px] leading-none tracking-[0.08em] text-gold sm:text-5xl">
-              ДЕП
-            </div>
+          <div className="loader-mark absolute inset-0 grid place-items-center text-gold">
+            <svg viewBox="0 0 64 64" className="size-16 sm:size-20" aria-hidden>
+              <path
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.25"
+                strokeLinecap="round"
+                d="M32 10v34M20 50h24M18 18h28"
+              />
+              <path
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.25"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M18 18l-8 14h16L18 18zm28 0l-8 14h16L46 18z"
+              />
+            </svg>
           </div>
         </div>
         <div className="loader-mark space-y-2">
